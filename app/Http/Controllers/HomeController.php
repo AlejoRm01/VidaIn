@@ -2,16 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
-use Illuminate\Http\Request;
-
 class HomeController extends Controller
 {
     public function index()
     {
         $viewData = [];
         $viewData['title'] = 'VidaIn - Vida independiente';
-        $viewData['subtitle'] = 'Prueba';
+        $viewData['subtitle'] = 'VIDAIN 2022';
 
         return view('home.index')->with('viewData', $viewData);
     }
