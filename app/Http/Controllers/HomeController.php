@@ -6,23 +6,21 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
-        return view('home');
+        $viewData = [];
+        $viewData["title"] = "Home Page - Online Store";
+        $viewData["subtitle"] = "";
+        return view("home.index")->with("viewData", $viewData);
+    }
+
+    public function about()
+    {
+        $viewData = [];
+        $viewData["title"] = "VidaIn";
+        $viewData["description"] = "Nuestro equipo";
+        $viewData["author"] = "Desarrollado por: Alejandro Rrodriguez Muñoz";
+
+        return view('home.about')->with("viewData", $viewData);
     }
 }
