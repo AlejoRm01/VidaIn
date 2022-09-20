@@ -10,7 +10,7 @@ class UsController extends Controller
         ['src' => '/photo/3.jpeg', 'name' => 'Yuliana Olaya'],
         ['src' => '/photo/4.jpeg', 'name' => 'Alejandro Rodriguez'],
         ['src' => '/photo/5.jpeg', 'name' => 'Mateo Ángel'],
-        ['src' => '/photo/6.jpeg', 'name' => 'Santiago Díaz']
+        ['src' => '/photo/6.jpeg', 'name' => 'Santiago Díaz'],
     ];
 
     public function index()

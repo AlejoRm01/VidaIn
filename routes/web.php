@@ -18,7 +18,6 @@ Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home.index')
 Route::get('/us', 'App\Http\Controllers\UsController@index')->name('us.index');
 
 Route::middleware('auth')->group(function () {
-    
 });
 
 Auth::routes();
