@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 class UsController extends Controller
 {
     public static $integrantes = [
-        [ 'src' => '/photo/1.jpeg', 'name' => 'Izabella Valencia'],
+        ['src' => '/photo/1.jpeg', 'name' => 'Izabella Valencia'],
         ['src' => '/photo/2.jpeg', 'name' => 'Manuela Restrepo'],
         ['src' => '/photo/3.jpeg', 'name' => 'Yuliana Olaya'],
         ['src' => '/photo/4.jpeg', 'name' => 'Alejandro Rodriguez'],
