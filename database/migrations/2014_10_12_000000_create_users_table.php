@@ -19,14 +19,6 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('city');
-            $table->string('address');
-            $table->string('phone');
-            $table->string('document');
-            $table->string('age');
-            $table->string('weight');
-            $table->string('comorbidities');
-            $table->string('role')->default('user');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -40,13 +32,5 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
-        $table->dropColumn(['city']); 
-        $table->dropColumn(['address']); 
-        $table->dropColumn(['age']);
-        $table->dropColumn(['weight']);
-        $table->dropColumn(['comorbidities']);   
-        $table->dropColumn(['phone']); 
-        $table->dropColumn(['document']); 
-        $table->dropColumn(['role']); 
     }
 };
