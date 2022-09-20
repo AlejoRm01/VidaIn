@@ -24,8 +24,7 @@
                     <a class="nav-link active" href="{{ route('home.index') }}">Home</a>
                     <a class="nav-link active" href="{{ route('us.index') }}">Nosotros</a>
                     @guest
-                        <a class="nav-link active" href="{{ route('login') }}">Iniciar sesión</a>
-                        <a class="nav-link active" href="{{ route('register') }}">Registraese</a>
+                        <a class="nav-link active" href="{{ route('login') }}">Ingresar</a>
                     </div>
                             @csrf
                         </form>
