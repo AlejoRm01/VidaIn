@@ -21,14 +21,18 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link active" href="{{ route('home.index') }}">Home</a>
-                    <a class="nav-link active" href="{{ route('us.index') }}">Nosotros</a>
+                    <a class="nav-link active" href="{{ route('home.index') }}">Inicio</a>
+                    <a class="nav-link active" href="{{ route('home.about') }}">Nosotros</a>
                     <div class="vr bg-white mx-2 d-none d-lg-block"></div>
                     @guest
                         <a class="nav-link active" href="{{ route('login') }}">Iniciar sesión</a>
-                    </div>
+                    @else    
+                    <a class="nav-link active" href="{{ route('home.index') }}">{{ Auth::user()->getName() }}</a>
+                    <form id="logout" action="{{ route('logout') }}" method="POST">
+                        <a role="button" class="nav-link active"
+                            onclick="document.getElementById('logout').submit();">Cerrar sesión</a>
                             @csrf
-                        </form>
+                    </form>
                     @endguest
                         
                 </div>
