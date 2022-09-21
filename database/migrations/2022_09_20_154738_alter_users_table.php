@@ -13,8 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) 
-        { 
+        Schema::table('users', function (Blueprint $table) {
             $table->string('city');
             $table->string('address');
             $table->string('phone');
@@ -22,8 +21,7 @@ return new class extends Migration
             $table->string('age');
             $table->string('weight');
             $table->string('comorbidities');
-            $table->string('role')->default('user'); 
-            
+            $table->string('role')->default('user');
         });
     }
 
@@ -34,17 +32,15 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) 
-        { 
-            $table->dropColumn(['city']); 
-            $table->dropColumn(['address']); 
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn(['city']);
+            $table->dropColumn(['address']);
             $table->dropColumn(['age']);
             $table->dropColumn(['weight']);
-            $table->dropColumn(['comorbidities']);   
-            $table->dropColumn(['phone']); 
-            $table->dropColumn(['document']); 
-            $table->dropColumn(['role']); 
+            $table->dropColumn(['comorbidities']);
+            $table->dropColumn(['phone']);
+            $table->dropColumn(['document']);
+            $table->dropColumn(['role']);
         });
     }
 };
-

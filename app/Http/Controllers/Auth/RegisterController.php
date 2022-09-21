@@ -55,11 +55,11 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'phone' => ['required', 'string', 'min:10', 'max:10'],
             'age' => ['required', 'string', 'min:2', 'max:3'],
-            'weight' => ['required', 'string', 'min:2','max:3'],
+            'weight' => ['required', 'string', 'min:2', 'max:3'],
             'comorbidities' => ['required', 'string', 'max:1000'],
             'city' => ['required', 'string', 'max:20'],
             'address' => ['required', 'string', 'max:100'],
-            'document' => ['required', 'string', 'max:10']
+            'document' => ['required', 'string', 'max:10'],
         ]);
     }
 
@@ -81,7 +81,7 @@ class RegisterController extends Controller
             'city' => $data['city'],
             'document' => $data['document'],
             'address' => $data['address'],
-            'weight' => $data['weight']
+            'weight' => $data['weight'],
         ]);
     }
 }
