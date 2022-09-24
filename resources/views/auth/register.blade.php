@@ -99,28 +99,33 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="city" class="col-md-4 col-form-label text-md-end">{{ __('Comorbilidades') }}</label>
+                            <label for="comorbidities[]" class="col-md-4 col-form-label text-md-end">{{ __('Comorbilidades') }}</label>
                             <div class="col-md-6">
                                 <div class="form-check">
-                                    <input class="form-check-label" value="Artrosis" type="checkbox" name="show_option[]">
+                                    <input class="form-check-label" value="Artrosis" type="checkbox" name="comorbidities[]">
                                     Artrosis
                                 </div>
                                 <div class="form-check">
-                                <input class="form-check-label" value="Artritis" type="checkbox" name="show_option[]">
+                                <input class="form-check-label" value="Artritis" type="checkbox" name="comorbidities[]">
                                    Artritis 
                                 </div>
                                 <div class="form-check">
-                                <input class="form-check-label" value="Hipertensión" type="checkbox" name="show_option[]">
+                                <input class="form-check-label" value="Hipertensión" type="checkbox" name="comorbidities[]">
                                    Hipertensión 
                                 </div>
                                 <div class="form-check">
-                                <input class="form-check-label" value="Estrenimiento" type="checkbox" name="show_option[]">
+                                <input class="form-check-label" value="Estrenimiento" type="checkbox" name="comorbidities[]">
                                    Estrenimiento
                                 </div>
                                 <div class="form-check">
-                                <input class="form-check-label" value="Dano Renal" type="checkbox" name="show_option[]">
+                                <input class="form-check-label" value="Dano Renal" type="checkbox" name="comorbidities[]">
                                    Daño Renal 
                                 </div>
+                                @error('comorbidities[]')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
                         <div class="row mb-3">
