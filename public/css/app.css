@@ -1,4 +1,4 @@
-.bg-secondary {
+    .bg-secondary {
         background-color: #205375 !important;
     }
     
@@ -25,3 +25,9 @@
         height: 200px;
         border-radius: 100px;
     }
+
+
+    select option:checked {
+        background-color: #112B3C !important;
+        color: white !important;
+      } 

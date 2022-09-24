@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('Registro') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -99,15 +99,28 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="comorbidities" class="col-md-4 col-form-label text-md-end">{{ __('Comorbilidades') }}</label>
+                            <label for="city" class="col-md-4 col-form-label text-md-end">{{ __('Comorbilidades') }}</label>
                             <div class="col-md-6">
-                                <input id="comorbidities" type="comorbidities" class="form-control @error('comorbidities') is-invalid @enderror" name="comorbidities" required autocomplete="new-comorbidities">
-
-                                @error('comorbidities')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <div class="form-check">
+                                    <input class="form-check-label" value="Artrosis" type="checkbox" name="show_option[]">
+                                    Artrosis
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-label" value="Artritis" type="checkbox" name="show_option[]">
+                                   Artritis 
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-label" value="Hipertensión" type="checkbox" name="show_option[]">
+                                   Hipertensión 
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-label" value="Estrenimiento" type="checkbox" name="show_option[]">
+                                   Estrenimiento
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-label" value="Dano Renal" type="checkbox" name="show_option[]">
+                                   Daño Renal 
+                                </div>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -153,7 +166,7 @@
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn bg-primary text-white">
-                                    {{ __('Register') }}
+                                    {{ __('Registrarse') }}
                                 </button>
                             </div>
                         </div>
