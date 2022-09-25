@@ -28,7 +28,7 @@ class User extends Authenticatable
        * $this->attributes['document'] - string - contains the user document
        * $this->attributes['comorbidities'] - string - contains the comorbidities of the user
        * $this->attributes['weight'] - string - contains the user weight
-       * $this->orders - Order[] - contains the associated diets
+       * $this->diet - diet[] - contains the associated diets
     */
 
     /**
