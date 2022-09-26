@@ -57,17 +57,18 @@
                                     {{ __('Ingresar') }}
                                 </button>
 
+                                @if(Route::has('register')) 
+                                    <a class="btn bg-primary text-white" href="{{ route('register') }}">
+                                        {{ __('Registrarme') }}
+                                    </a>
+                                @endif
+
                                 @if (Route::has('password.request'))
                                     <a class="btn bg-primary text-white" href="{{ route('password.request') }}">
                                         {{ __('¿Olvidaste tu contraseña?') }}
                                     </a>
                                 @endif
                                 
-                                @if(Route::has('register')) 
-                                    <a class="btn bg-primary text-white" href="{{ route('register') }}">
-                                        {{ __('Registrarme') }}
-                                    </a>
-                                @endif
                             </div>
                         </div>
                     </form>

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
 class Aliment extends Model
 {
@@ -31,6 +32,7 @@ class Aliment extends Model
     public static function validate($request)
     {
         $request->validate([
+            "id" => 'required|max:255',
             "name" => "required|max:255",
             "brand" => "required|max:255",
             "category" => "required|max:50",
@@ -44,7 +46,7 @@ class Aliment extends Model
             'image' => 'image'
         ]);
     }
-
+    
     public static function getId()
     {
         return $this->attribuites['id'];
@@ -115,7 +117,6 @@ class Aliment extends Model
         $this->attributes['carbohydrates'] = $carbohydrates;
     }
 
-
     public function getFats()
     {
         return $this->attributes['fats'];
@@ -164,6 +165,41 @@ class Aliment extends Model
     public function setImage($Image)
     {
         $this->attributes['image'] = $Image;
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->attributes['created_at'];
+    }
+
+    public function setCreatedAt($createdAt)
+    {
+        $this->attributes['created_at'] = $createdAt;
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->attributes['updated_at'];
+    }
+
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->attributes['updated_at'] = $updatedAt;
+    }
+
+    public function users()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function getUser()
+    {
+        return $this->user;
+    }
+    
+    public function setUser($user)
+    {
+        $this->user = $user;
     }
 }
 
