@@ -23,30 +23,6 @@
             <div class="card-text text-center mb-3">
                 <h5>${{ $aliment->getBrand() }}</h5>
             </div>
-            <div class="card-text text-center mb-3">
-                <h5>${{ $aliment->getCategory() }}</h5>
-            </div>
-            <div class="card-text text-center mb-3">
-                <h5>${{ $aliment->getWeight() }}</h5>
-            </div>
-            <div class="card-text text-center mb-3">
-                <h5>${{ $aliment->getCalories() }}</h5>
-            </div>
-            <div class="card-text text-center mb-3">
-                <h5>${{ $aliment->getCarbohydrates() }}</h5>
-            </div>
-            <div class="card-text text-center mb-3">
-                <h5>${{ $aliment->getFats() }}</h5>
-            </div>
-            <div class="card-text text-center mb-3">
-                <h5>${{ $aliment->getProteins() }}</h5>
-            </div>
-            <div class="card-text text-center mb-3">
-                <h5>${{ $aliment->getFiber() }}</h5>
-            </div>
-            <div class="card-text text-center mb-3">
-                <h5>${{ $aliment->getCholesterol() }}</h5>
-            </div>
         </div>
     </div>
     @endforeach
