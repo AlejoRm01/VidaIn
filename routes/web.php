@@ -12,8 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home.index');
+Route::get('/', 'App\Http\Controllers\Auth\LoginController@showLoginForm')->name('login'); 
+Route::get('/index', 'App\Http\Controllers\HomeController@index')->name('home.index');
 Route::get('/about', 'App\Http\Controllers\HomeController@about')->name('home.about');
 
 Route::middleware('auth')->group(function () {
