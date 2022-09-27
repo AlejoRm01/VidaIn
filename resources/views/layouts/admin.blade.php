@@ -41,7 +41,7 @@
         <div class="container"> <small>
                 Copyright - <a class="text-reset fw-bold text-decoration-none" target="_blank"
                     href="#">
-                    Felipe Álvarez </a>
+                    Alejandro Rodriguez </a>
             </small> </div>
     </div>
     <!-- footer -->

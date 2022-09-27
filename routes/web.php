@@ -17,6 +17,15 @@ Route::get('/index', 'App\Http\Controllers\HomeController@index')->name('home.in
 Route::get('/about', 'App\Http\Controllers\HomeController@about')->name('home.about');
 
 Route::middleware('auth')->group(function () {
+    Route::get('/aliments', 'App\Http\Controllers\AlimentController@index')->name("aliment.index");
+    Route::get('/search', 'App\Http\Controllers\AlimentController@search')->name("aliment.search");
+    Route::get('/aliments/{id}', 'App\Http\Controllers\AlimentController@show')->name("aliment.show");
+
+});
+
+Route::middleware('admin')->group(function () {
+    //Admin section
+    Route::get('/admin', 'App\Http\Controllers\Admin\AdminHomeController@index')->name("admin.home.index");
 });
 
 Auth::routes();
