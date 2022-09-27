@@ -170,6 +170,11 @@ class User extends Authenticatable
         $this->attributes['weight'] = $weight;
     }
 
+    public function getRole()
+    {
+        return $this->attributes['role'];
+    }
+
     public function getComordities()
     {
         return $this->attributes['comorbidities'];
