@@ -53,9 +53,15 @@
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn bg-primary text-white">
+                                <button  type="submit" class="btn bg-primary text-white" href="{{ route('aliment.index') }}">
                                     {{ __('Ingresar') }}
-                                </button>
+                                </button >
+
+                                @if(Route::has('register')) 
+                                    <a class="btn bg-primary text-white" href="{{ route('register') }}">
+                                        {{ __('Registrarme') }}
+                                    </a>
+                                @endif
 
                                 @if (Route::has('password.request'))
                                     <a class="btn bg-primary text-white" href="{{ route('password.request') }}">
@@ -63,11 +69,6 @@
                                     </a>
                                 @endif
                                 
-                                @if(Route::has('register')) 
-                                    <a class="btn bg-primary text-white" href="{{ route('register') }}">
-                                        {{ __('Registrarme') }}
-                                    </a>
-                                @endif
                             </div>
                         </div>
                     </form>

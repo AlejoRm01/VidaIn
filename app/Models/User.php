@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Aliment;
 
 class User extends Authenticatable
 {
@@ -199,18 +200,18 @@ class User extends Authenticatable
         $this->attributes['updated_at'] = $updatedAt;
     }
 
-    public function diets()
+    public function aliment()
     {
-        return $this->hasMany(Diet::class);
+        return $this->belongsTo(Aliment::class);
     }
 
-    public function getDiets()
+    public function getAliment()
     {
-        return $this->diets;
+        return $this->aliment;
     }
 
-    public function setDiets($diets)
+    public function setAliment($aliment)
     {
-        $this->diets = $diets;
+        $this->aliment = $aliment;
     }
 }
