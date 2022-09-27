@@ -53,9 +53,9 @@
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <a type="submit" class="btn bg-primary text-white" href="{{ route('aliment.index') }}">
+                                <button  type="submit" class="btn bg-primary text-white" href="{{ route('aliment.index') }}">
                                     {{ __('Ingresar') }}
-                                </a>
+                                </button >
 
                                 @if(Route::has('register')) 
                                     <a class="btn bg-primary text-white" href="{{ route('register') }}">
