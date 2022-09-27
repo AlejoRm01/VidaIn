@@ -3,15 +3,16 @@
 @section('content')
 <div class="card mb-5">
     <div class="card-header"> 
-        Admin Panel - Home Page
+        Admin Panel - Pagina de Inicio
     </div>
     <div class="card-body">
-        Welcome to the Admin Panel, use the sidebar to navigate between the different options. 
+        Bienvenido al panel de administradores, use la barra lateral para navegar entre las diferentes opciones.
+
     </div>
 </div> 
 <div class="card">
     <div class="card-header"> 
-        Datos del negocio
+        Informacion importante
     </div>
 </div> 
 @endsection
