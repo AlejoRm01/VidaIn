@@ -4,7 +4,9 @@
 @section('content')
 
 <div class="container">
-    <img scr="{{$viewData['integrantes']}}">
+    <div class="row">
+        <img  class="img-thumbnail" src="{{  asset($viewData['integrantes'])  }}">
+    </div>
 </div>
 
 @endsection
