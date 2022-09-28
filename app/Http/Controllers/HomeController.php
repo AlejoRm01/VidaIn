@@ -22,6 +22,6 @@ class HomeController extends Controller
 
         return view('home.about')->with('viewData', $viewData);
     }
-    public static $photo = '/img/team.jpg';
 
+    public static $photo = '/img/team.jpg';
 }

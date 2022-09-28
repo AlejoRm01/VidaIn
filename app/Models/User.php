@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use App\Models\Aliment;
 
 class User extends Authenticatable
 {
@@ -37,7 +36,6 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    
     protected $fillable = [
         'name',
         'email',
@@ -218,5 +216,20 @@ class User extends Authenticatable
     public function setAliment($aliment)
     {
         $this->aliment = $aliment;
+    }
+
+    public function diet()
+    {
+        return $this->hasMany(Diet::class);
+    }
+
+    public function getDiet()
+    {
+        return $this->diet;
+    }
+
+    public function setDiet($diet)
+    {
+        $this->diet = $diet;
     }
 }
