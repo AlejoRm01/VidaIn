@@ -42,7 +42,7 @@
     </nav>
     <header class="masthead bg-primary text-white text-center py-4">
         <div class="container d-flex align-items-center flex-column">
-            <h2>@yield('subtitle', 'A Laravel Online App')</h2>
+            <h2>@yield('subtitle', 'Iniciar sesión')</h2>
         </div>
     </header>
     <!-- header -->
@@ -53,7 +53,7 @@
     <div class="copyright py-4 text-center text-white">
         <div class="container">
             <small>
-                @yield('footer', 'Footer')
+                @yield('', '')
             </small>
         </div>
     </div>
