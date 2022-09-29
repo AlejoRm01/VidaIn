@@ -111,7 +111,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Cholesterol:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="cholesterol" value=" {{ $viewData['aliment']->getCholesterol() }}" type="number" class="form-control">
+                            <input name="cholesterol" value=" {{ $viewData['aliment']->getCholesterol() }}" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
