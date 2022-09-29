@@ -2,7 +2,8 @@
 @section('title', $viewData["title"])
 @section('content')
 <div class="card mb-4">
-    <div class="card-header"> Edit Product
+    <div class="card-header"> 
+        Edit Aliment
     </div>
     <div class="card-body">
         @if($errors->any())

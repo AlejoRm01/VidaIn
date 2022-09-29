@@ -2,23 +2,24 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Model;
 
 
-class DishHouse extends Authenticatable
+class DishHouse extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'description',
-        'healthyCategory',
-        'instructions',
-    ];
+    public static function validate($request)
+    {
+        $request->validate([
+            'name' => 'required|max:255',
+            'description'=> 'required|max:1000',
+            'healthyCategory'=> 'required|max:255',
+            'instructions'=> 'required|max:1000',
+        ]);
+    }
 
     public function getId()
     {
@@ -47,7 +48,7 @@ class DishHouse extends Authenticatable
 
     public function setDescription($description)
     {
-        $this->attributes['description'] = $name;
+        $this->attributes['description'] = $description;
     }
 
     public function getHealthyCategory()

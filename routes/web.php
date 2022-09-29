@@ -39,6 +39,13 @@ Route::middleware('admin')->group(function () {
     Route::delete('/admin/aliments/{id}/delete', 'App\Http\Controllers\Admin\AdminAlimentController@delete')->name("admin.aliment.delete");
     Route::get('/admin/aliments/{id}/edit', 'App\Http\Controllers\Admin\AdminAlimentController@edit')->name("admin.aliment.edit");
     Route::put('/admin/aliments/{id}/update', 'App\Http\Controllers\Admin\AdminAlimentController@update')->name("admin.aliment.update");
+
+    //CRUD DISH HOUSE
+    Route::get('/admin/dishHouse', 'App\Http\Controllers\Admin\AdminDishHouseController@index')->name("admin.dishHouse.index");
+    Route::post('/admin/dishHouse/store', 'App\Http\Controllers\Admin\AdminDishHouseController@store')->name("admin.dishHouse.store");
+    Route::delete('/admin/dishHouse/{id}/delete', 'App\Http\Controllers\Admin\AdminDishHouseController@delete')->name("admin.dishHouse.delete");
+    Route::get('/admin/dishHouse/{id}/edit', 'App\Http\Controllers\Admin\AdminDishHouseController@edit')->name("admin.dishHouse.edit");
+    Route::put('/admin/dishHouse/{id}/update', 'App\Http\Controllers\Admin\AdminDishHouseController@update')->name("admin.dishHouse.update");
 });
 
 Auth::routes();
