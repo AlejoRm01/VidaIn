@@ -47,14 +47,14 @@ class Aliment extends Model
 
     public function getId()
     {
-        return $this->attribuites['id'];
+        return $this->attributes['id'];
     }
 
     public function setId($id)
     {
         $this->attributes['id'] = $id;
     }
-
+    
     public function getBarCode()
     {
         return $this->attribuites['barCode'];

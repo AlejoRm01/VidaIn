@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Aliment;
+use Illuminate\Support\Facades\Storage;
 
 class AdminAlimentController extends Controller
 {
@@ -22,7 +23,7 @@ class AdminAlimentController extends Controller
         Aliment::validate($request);
 
         $newProduct = new Aliment();
-        $newProduct->setId($request->input('barCode'));
+        $newProduct->setBarcode($request->input('barCode'));
         $newProduct->setName($request->input('name'));
         $newProduct->setBrand($request->input('brand'));
         $newProduct->setCategory($request->input('category'));

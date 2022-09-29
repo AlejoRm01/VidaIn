@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Aliment;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class AlimentController extends Controller
@@ -20,7 +21,7 @@ class AlimentController extends Controller
     public function show($id)
     {
         $viewData = [];
-        $product = Aliment::findOrFail($id);
+        $aliment = Aliment::findOrFail($id);
         $viewData['title'] = $aliment->getName().' - VidaIn';
         $viewData['subtitle'] = $aliment->getName().' - Informacion de alimentos';
         $viewData['aliment'] = $aliment;
