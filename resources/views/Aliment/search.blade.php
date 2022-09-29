@@ -17,7 +17,7 @@
             <div class="card">
                 <img src="{{ asset('/storage/'.$aliment->getImage()) }}" class="card-img-top img-card">
                 <div class="card-body text-center">
-                    <a href="{{ route('product.show', ['id'=> $aliment->getId()]) }}" class="btn bg-primary text-white">
+                    <a href="{{ route('aliment.show', ['id'=> $aliment->getId()]) }}" class="btn bg-primary text">
                         {{ $aliment->getName() }}</a>
                 </div>
             </div>
