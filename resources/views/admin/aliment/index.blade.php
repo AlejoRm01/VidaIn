@@ -136,4 +136,43 @@
 </div>
 
 
+<div class="card">
+    <div class="card-header"> 
+        Manage Aliments
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($viewData["aliments"] as $aliment)
+                <tr>
+                    <td>{{ $aliment->getId() }}</td>
+                    <td>{{ $aliment->getName() }}</td>
+                    <td>
+                        <a class="btn btn-primary" href="{{route('admin.aliment.edit', ['id'=> $aliment->getId()])}}">
+                            <i class="bi-pencil"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <form action="{{ route('admin.aliment.delete', $aliment->getId())}}" method="POST"> 
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger"> <i class="bi-trash"></i>
+                            </button> 
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>
+
 @endsection

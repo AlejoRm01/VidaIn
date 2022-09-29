@@ -29,6 +29,9 @@ Route::middleware('admin')->group(function () {
     //CRUD ALIMENTS
     Route::get('/admin/aliments', 'App\Http\Controllers\Admin\AdminAlimentController@index')->name("admin.aliment.index");
     Route::post('/admin/aliments/store', 'App\Http\Controllers\Admin\AdminAlimentController@store')->name("admin.aliment.store");
+    Route::delete('/admin/aliments/{id}/delete', 'App\Http\Controllers\Admin\AdminAlimentController@delete')->name("admin.aliment.delete");
+    Route::get('/admin/aliments/{id}/edit', 'App\Http\Controllers\Admin\AdminAlimentController@edit')->name("admin.aliment.edit");
+    Route::put('/admin/aliments/{id}/update', 'App\Http\Controllers\Admin\AdminAlimentController@update')->name("admin.aliment.update");
 });
 
 Auth::routes();

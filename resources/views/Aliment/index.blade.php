@@ -20,9 +20,6 @@
                 <a href="{{ route('aliment.show', ['id'=> $aliment->getId()]) }}" class="btn bg-primary text">
                     {{ $aliment->getName() }}</a>
             </div>
-            <div class="card-text text-center mb-3">
-                <h5>{{ $aliment->getBrand() }}</h5>
-            </div>
         </div>
     </div>
     @endforeach

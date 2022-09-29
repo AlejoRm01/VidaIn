@@ -115,7 +115,7 @@ class Aliment extends Model
         $this->attributes['calories'] = $calories;
     }
 
-    public function getCarbohydrates()
+    public function getCarbohydrate()
     {
         return $this->attributes['carbohydrate'];
     }
