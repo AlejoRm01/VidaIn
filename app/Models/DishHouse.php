@@ -20,6 +20,16 @@ class User extends Authenticatable
         'instructions',
     ];
 
+    public function getId()
+    {
+        return $this->attributes['id'];
+    }
+
+    public function setId($id)
+    {
+        $this->attributes['id'] = $id;
+    }
+
     public function getName()
     {
         return $this->attributes['name'];

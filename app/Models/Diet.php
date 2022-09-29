@@ -14,8 +14,29 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
     protected $fillable = [
-        'description',
+        'description'=>'required|max:1000',
+        'img'=>''
     ];
+
+    public function getId()
+    {
+        return $this->attributes['id'];
+    }
+
+    public function setId($id)
+    {
+        $this->attributes['id'] = $id;
+    }
+
+    public function getDescription()
+    {
+        return $this->attributes['description'];
+    }
+
+    public function setDescription($description)
+    {
+        $this->attributes['description'] = $description;
+    }
 
     public function dishHouse()
     {
