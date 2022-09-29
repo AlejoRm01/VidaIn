@@ -57,7 +57,7 @@ class Aliment extends Model
     
     public function getBarCode()
     {
-        return $this->attribuites['barCode'];
+        return $this->attributes['barCode'];
     }
 
     public function setBarCode($barCode)

@@ -21,7 +21,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Bar Code:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="barCode" value="{{ old('barCode') }}" type="number" class="form-control">
+                            <input name="barCode" value="{{ $viewData['aliment']->getBarCode() }}" type="number" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Name:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="name" value="{{ old('name') }}" type="text" class="form-control">
+                            <input name="name" value="{{ $viewData['aliment']->getName() }}" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Brand:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="brand" value="{{ old('brand') }}" type="text" class="form-control">
+                            <input name="brand" value="{{ $viewData['aliment']->getBrand() }}" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Category:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="category" value="{{ old('category') }}" type="text" class="form-control">
+                            <input name="category" value="{{ $viewData['aliment']->getCategory() }}" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Weight:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="weight" value="{{ old('weight') }}" type="text" class="form-control">
+                            <input name="weight" value="{{ $viewData['aliment']->getWeight() }}" type="number" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Calories:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="calories" value="{{ old('calories') }}" type="number" class="form-control">
+                            <input name="calories" value="{{ $viewData['aliment']->getCalories() }}" type="number" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Carbohydrate:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="carbohydrate" value="{{ old('carbohydrate') }}" type="number" class="form-control">
+                            <input name="carbohydrate" value="{{ $viewData['aliment']->getCarbohydrate() }}" type="number" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Fats:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="fats" value="{{ old('fats') }}" type="number" class="form-control">
+                            <input name="fats" value="{{ $viewData['aliment']->getFats() }}" type="number" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Proteins:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="proteins" value="{{ old('proteins') }}" type="number" class="form-control">
+                            <input name="proteins" value="{{ $viewData['aliment']->getProteins() }}" type="number" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Fiber:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="fiber" value="{{ old('fiber') }}" type="number" class="form-control">
+                            <input name="fiber" value="{{ $viewData['aliment']->getFiber() }}" type="number" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Cholesterol:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="cholesterol" value="{{ old('cholesterol') }}" type="number" class="form-control">
+                            <input name="cholesterol" value=" {{ $viewData['aliment']->getCholesterol() }}" type="number" class="form-control">
                         </div>
                     </div>
                 </div>

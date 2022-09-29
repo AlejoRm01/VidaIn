@@ -22,29 +22,29 @@ class AdminAlimentController extends Controller
         
         Aliment::validate($request);
 
-        $newProduct = new Aliment();
-        $newProduct->setBarcode($request->input('barCode'));
-        $newProduct->setName($request->input('name'));
-        $newProduct->setBrand($request->input('brand'));
-        $newProduct->setCategory($request->input('category'));
-        $newProduct->setWeight($request->input('weight'));
-        $newProduct->setCalories($request->input('calories'));
-        $newProduct->setCarbohydrate($request->input('carbohydrate'));
-        $newProduct->setFats($request->input('fats'));
-        $newProduct->setProteins($request->input('proteins'));
-        $newProduct->setFiber($request->input('fiber'));
-        $newProduct->setCholesterol($request->input('cholesterol'));
-        $newProduct->setImage("aliment.png");
-        $newProduct->save();
+        $newaliment = new Aliment();
+        $newaliment->setBarcode($request->input('barCode'));
+        $newaliment->setName($request->input('name'));
+        $newaliment->setBrand($request->input('brand'));
+        $newaliment->setCategory($request->input('category'));
+        $newaliment->setWeight($request->input('weight'));
+        $newaliment->setCalories($request->input('calories'));
+        $newaliment->setCarbohydrate($request->input('carbohydrate'));
+        $newaliment->setFats($request->input('fats'));
+        $newaliment->setProteins($request->input('proteins'));
+        $newaliment->setFiber($request->input('fiber'));
+        $newaliment->setCholesterol($request->input('cholesterol'));
+        $newaliment->setImage("aliment.png");
+        $newaliment->save();
 
         if ($request->hasFile('image')) {
-            $imageName = $newProduct->getId().".".$request->file('image')->extension();
+            $imageName = $newaliment->getId().".".$request->file('image')->extension();
             Storage::disk('public')->put(
                 $imageName,
                 file_get_contents($request->file('image')->getRealPath())
             );
-            $newProduct->setImage($imageName);
-            $newProduct->save();
+            $newaliment->setImage($imageName);
+            $newaliment->save();
         }
 
         return back();
@@ -52,7 +52,7 @@ class AdminAlimentController extends Controller
 
     public function delete($id)
     {
-        Product::destroy($id);
+        Aliment::destroy($id);
         return back();
     }
 
@@ -69,32 +69,31 @@ class AdminAlimentController extends Controller
 
         Aliment::validate($request);
 
-        $product = Aliment::findOrFail($id);
-        $product->setId($request->input('id'));
-        $product->setBarCode($request->input('barCode'));
-        $product->setName($request->input('name'));
-        $product->setBrand($request->input('brand'));
-        $product->setCategory($request->input('category'));
-        $product->setWeight($request->input('weight'));
-        $newProduct->setCalories($request->input('calories'));
-        $newProduct->setCarbohydrate($request->input('carbohydrate'));
-        $newProduct->setFats($request->input('fats'));
-        $newProduct->setProteins($request->input('Proteins'));
-        $newProduct->setFiber($request->input('Fiber'));
-        $newProduct->setCholesterol($request->input('cholesterol'));
+        $aliment = Aliment::findOrFail($id);
+        $aliment->setBarCode($request->input('barCode'));
+        $aliment->setName($request->input('name'));
+        $aliment->setBrand($request->input('brand'));
+        $aliment->setCategory($request->input('category'));
+        $aliment->setWeight($request->input('weight'));
+        $aliment->setCalories($request->input('calories'));
+        $aliment->setCarbohydrate($request->input('carbohydrate'));
+        $aliment->setFats($request->input('fats'));
+        $aliment->setProteins($request->input('proteins'));
+        $aliment->setFiber($request->input('fiber'));
+        $aliment->setCholesterol($request->input('cholesterol'));
        
 
         if ($request->hasFile('image')) {
-            $imageName = $product->getId().".".$request->file('image')->extension();
+            $imageName = $aliment->getId().".".$request->file('image')->extension();
             Storage::disk('public')->put(
                 $imageName,
                 file_get_contents($request->file('image')->getRealPath())
             );
 
-            $product->setImage($imageName);
+            $aliment->setImage($imageName);
         }
 
-        $product->save();
+        $aliment->save();
         return redirect()->route('admin.aliment.index');
     }
 }
