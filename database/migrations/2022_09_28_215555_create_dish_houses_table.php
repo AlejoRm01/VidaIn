@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('description');
             $table->integer('healthyCategory');
             $table->integer('instructions');
+            $table->string('image');
             $table->timestamps();
         });
     }

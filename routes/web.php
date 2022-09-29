@@ -17,9 +17,16 @@ Route::get('/index', 'App\Http\Controllers\HomeController@index')->name('home.in
 Route::get('/about', 'App\Http\Controllers\HomeController@about')->name('home.about');
 
 Route::middleware('auth')->group(function () {
+    //User section
+    //Aliment
     Route::get('/aliments', 'App\Http\Controllers\AlimentController@index')->name('aliment.index');
-    Route::get('/search', 'App\Http\Controllers\AlimentController@search')->name('aliment.search');
+    Route::get('/aliments/search', 'App\Http\Controllers\AlimentController@search')->name('aliment.search');
     Route::get('/aliments/{id}', 'App\Http\Controllers\AlimentController@show')->name('aliment.show');
+
+    //Dish House
+    Route::get('/dishHouse', 'App\Http\Controllers\DishHouseController@index')->name('dishHouse.index');
+    Route::get('/dishHouse/search', 'App\Http\Controllers\DishHouseController@search')->name('dishHouse.search');
+    Route::get('/dishHouse/{id}', 'App\Http\Controllers\DishHouseController@show')->name('dishHouse.show');
 });
 
 Route::middleware('admin')->group(function () {

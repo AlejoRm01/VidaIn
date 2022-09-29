@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
 
-class User extends Authenticatable
+class DishHouse extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -68,6 +68,16 @@ class User extends Authenticatable
     public function setInstructions($instructions)
     {
         $this->attributes['instructions'] = $instructions;
+    }
+
+    public function getImage()
+    {
+        return $this->attributes['image'];
+    }
+
+    public function setImage($Image)
+    {
+        $this->attributes['image'] = $Image;
     }
 
     public function getCreatedAt()
