@@ -25,6 +25,10 @@ Route::middleware('auth')->group(function () {
 Route::middleware('admin')->group(function () {
     //Admin section
     Route::get('/admin', 'App\Http\Controllers\Admin\AdminHomeController@index')->name('admin.home.index');
+
+    //CRUD ALIMENTS
+    Route::get('/admin/aliments', 'App\Http\Controllers\Admin\AdminAlimentController@index')->name("admin.aliment.index");
+    Route::post('/admin/aliments/store', 'App\Http\Controllers\Admin\AdminAlimentController@store')->name("admin.aliment.store");
 });
 
 Auth::routes();

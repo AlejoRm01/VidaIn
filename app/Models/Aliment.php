@@ -12,13 +12,13 @@ class Aliment extends Model
     /**
      * ALIMENT ATTRIBUTES
      * this->attribute['id'] - int - contains the aliment primary key (id)
-     *  this -> attribute['barcode'] - int - contains the aliment bar code
+     * this -> attribute['barcode'] - int - contains the aliment bar code
      * $this->attributes['name'] - string - contains the aliment name
      * $this->attributes['brand'] - string - contains the aliment brand
      * $this->attributes['category'] - string - contains the aliment category
      * $this->attributes['weight'] - float - contains the aliment weight
      * $this->attributes['calories'] - int - contains the  aliment calories
-     * $this->attributes['carbohydrates'] - int - contains the  aliment carbohydrates
+     * $this->attributes['carbohydrate'] - int - contains the  aliment carbohydrates
      * $this->attributes['fats'] - int - contains the  aliment fats
      * $this->attributes['proteins'] - int - contains the  aliment proteins
      * $this->attributes['fiber'] - int - contains the  aliment fiber
@@ -30,7 +30,7 @@ class Aliment extends Model
     public static function validate($request)
     {
         $request->validate([
-            'id' => 'required|max:255',
+            'barCode' => 'required|max:255',
             'name' => 'required|max:255',
             'brand' => 'required|max:255',
             'category' => 'required|max:50',
@@ -45,14 +45,24 @@ class Aliment extends Model
         ]);
     }
 
-    public static function getId()
+    public function getId()
     {
         return $this->attribuites['id'];
     }
 
-    public static function setId($id)
+    public function setId($id)
     {
-        return $this->attribute['id'] = $id;
+        $this->attributes['id'] = $id;
+    }
+
+    public function getBarCode()
+    {
+        return $this->attribuites['barCode'];
+    }
+
+    public function setBarCode($barCode)
+    {
+        $this->attributes['barCode'] = $barCode;
     }
 
     public function getName()
@@ -107,12 +117,12 @@ class Aliment extends Model
 
     public function getCarbohydrates()
     {
-        return $this->attributes['carbohydrates'];
+        return $this->attributes['carbohydrate'];
     }
 
     public function setCarbohydrate($carbohydrates)
     {
-        $this->attributes['carbohydrates'] = $carbohydrates;
+        $this->attributes['carbohydrate'] = $carbohydrates;
     }
 
     public function getFats()

@@ -15,8 +15,10 @@ return new class extends Migration
     {
         Schema::create('aliments', function (Blueprint $table) {
             $table->id();
+            $table->string('barCode');
             $table->string('name');
             $table->string('category');
+            $table->string('brand');
             $table->integer('weight');
             $table->integer('calories');
             $table->integer('carbohydrate');
