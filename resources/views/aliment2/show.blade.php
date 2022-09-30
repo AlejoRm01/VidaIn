@@ -12,7 +12,7 @@
                 <div class="mb-3 row">
                     <label class="col-lg-2 col-md-6 col-sm-12 col-form-label"><h3> Nombre </h3></label>
                     <div class="col-lg-10 col-md-6 col-sm-12">
-                        <h5>{{ $viewData["aliment"]->getName() }}<h5> 
+                        <h5>{{ $viewData["aliment"]->getName() }}   <h5> 
                     </div>    
                 </div>
             </div>
@@ -36,7 +36,7 @@
                 <div class="mb-3 row">
                     <label class="col-lg-2 col-md-6 col-sm-12 col-form-label"><h3> Peso </h3></label>
                     <div class="col-lg-10 col-md-6 col-sm-12">
-                        <h5>{{ $viewData["aliment"]->getWeight() }}<h5> 
+                        <h5>{{ $viewData["aliment"]->getWeight() }}g<h5> 
                     </div>    
                 </div>
             </div>
@@ -44,7 +44,7 @@
                 <div class="mb-3 row">
                     <label class="col-lg-2 col-md-6 col-sm-12 col-form-label"><h3> Calorias </h3></label>
                     <div class="col-lg-10 col-md-6 col-sm-12">
-                        <h5>{{ $viewData["aliment"]->getCalories() }}<h5> 
+                        <h5>{{ $viewData["aliment"]->getCalories() }}g<h5> 
                     </div>    
                 </div>
             </div>
@@ -52,7 +52,7 @@
                 <div class="mb-3 row">
                     <label class="col-lg-2 col-md-6 col-sm-12 col-form-label"><h3> Carbohidratos </h3></label>
                     <div class="col-lg-10 col-md-6 col-sm-12">
-                        <h5>{{ $viewData["aliment"]->getCarbohydrates() }}<h5> 
+                        <h5>{{ $viewData["aliment"]->getCarbohydrate() }}g<h5> 
                     </div>    
                 </div>
             </div>
@@ -60,7 +60,7 @@
                 <div class="mb-3 row">
                     <label class="col-lg-2 col-md-6 col-sm-12 col-form-label"><h3> Grasas </h3></label>
                     <div class="col-lg-10 col-md-6 col-sm-12">
-                        <h5>{{ $viewData["aliment"]->getFats() }}<h5> 
+                        <h5>{{ $viewData["aliment"]->getFats() }}g<h5> 
                     </div>    
                 </div>
             </div>
@@ -68,7 +68,7 @@
                 <div class="mb-3 row">
                     <label class="col-lg-2 col-md-6 col-sm-12 col-form-label"><h3> Proteinas </h3></label>
                     <div class="col-lg-10 col-md-6 col-sm-12">
-                        <h5>{{ $viewData["aliment"]->getProteins() }}<h5> 
+                        <h5>{{ $viewData["aliment"]->getProteins() }}g<h5> 
                     </div>    
                 </div>
             </div>
@@ -76,7 +76,7 @@
                 <div class="mb-3 row">
                     <label class="col-lg-2 col-md-6 col-sm-12 col-form-label"><h3> Colesterol </h3></label>
                     <div class="col-lg-10 col-md-6 col-sm-12">
-                        <h5>{{ $viewData["aliment"]->getCholesterol() }}<h5> 
+                        <h5>{{ $viewData["aliment"]->getCholesterol() }}g<h5> 
                     </div>    
                 </div>
             </div>

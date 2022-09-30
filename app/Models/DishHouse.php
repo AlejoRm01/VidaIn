@@ -17,7 +17,7 @@ class DishHouse extends Model
             'name' => 'required|max:255',
             'description'=> 'required|max:1000',
             'healthyCategory'=> 'required|max:255',
-            'instructions'=> 'required|max:1000',
+            'instructions'=> 'required|max:10000',
         ]);
     }
 
