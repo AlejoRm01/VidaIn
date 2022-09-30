@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('age');
             $table->string('weight');
             $table->string('comorbidities');
-            $table->string('role')->default('admin');
+            $table->string('role')->default('user');
         });
     }
 
