@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\DishHouse;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class DishHouseController extends Controller
@@ -15,7 +14,7 @@ class DishHouseController extends Controller
         $viewData['subtitle'] = 'Informacion comida del hogar';
         $viewData['dishHouses'] = DishHouse::all();
 
-        return view('dishHouse.index')->with('viewData', $viewData);
+        return view('user.dishHouse.index')->with('viewData', $viewData);
     }
 
     public function show($id)
@@ -26,7 +25,7 @@ class DishHouseController extends Controller
         $viewData['subtitle'] = $dishHouse->getName().' - Informacion de DishHouseos';
         $viewData['dishHouse'] = $dishHouse;
 
-        return view('dishHouse.show')->with('viewData', $viewData);
+        return view('user.dishHouse.show')->with('viewData', $viewData);
     }
 
     public function search(Request $request)
@@ -38,6 +37,6 @@ class DishHouseController extends Controller
         $viewData['subtitle'] = 'Aqui encontraras informacion de todos los platos hogareños';
         $viewData['dishHouses'] = $search;
 
-        return view('dishHouse.search')->with('viewData', $viewData);
+        return view('user.dishHouse.search')->with('viewData', $viewData);
     }
 }
