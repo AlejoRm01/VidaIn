@@ -121,6 +121,9 @@
                                 <input class="form-check-label" value="Dano Renal" type="checkbox" name="comorbidities[]">
                                    Daño Renal 
                                 </div>
+                                <input class="form-check-label" value="Ninguna" type="checkbox" name="comorbidities[]">
+                                   Ninguna 
+                                </div>
                                 @error('comorbidities[]')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
