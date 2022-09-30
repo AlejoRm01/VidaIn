@@ -13,15 +13,15 @@
 
 <div class="row">
     @foreach ($viewData["aliments"] as $aliment)
-        <div class="col-md-4 col-lg-3 mb-2">
-            <div class="card">
-                <img src="{{ asset('/storage/'.$aliment->getImage()) }}" class="card-img-top img-card">
-                <div class="card-body text-center">
-                    <a href="{{ route('aliment.show', ['id'=> $aliment->getId()]) }}" class="btn bg-primary text">
-                        {{ $aliment->getName() }}</a>
-                </div>
+    <div class="col-md-4 col-lg-3 mb-2">
+        <div class="card">
+            <img src="{{ asset('/storage/'.$aliment->getImage()) }}" class="card-img-top img-card">
+            <div class="card-body text-center">
+                <a href="{{ route('aliment.show', ['id'=> $aliment->getId()]) }}" class="btn bg-primary text">
+                    {{ $aliment->getName() }}</a>
             </div>
         </div>
+    </div>
     @endforeach
 </div>
 @endsection
