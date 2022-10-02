@@ -4,9 +4,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Registro') }}</div>
-
+        <div class="row">
+                <img  class="img" src="{{  url('/img/senutLogo.jpeg')  }}" >
+            </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
@@ -24,48 +24,13 @@
                                 @enderror
                             </div>
                         </div>
-
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Correo Electronico') }}</label>
+                            <label for="document" class="col-md-4 col-form-label text-md-end">{{ __('Cedula') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="document" type="document" class="form-control @error('document') is-invalid @enderror" name="document" required autocomplete="new-document">
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Contraseña') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirmar contraseña') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="phone" class="col-md-4 col-form-label text-md-end">{{ __('Celular') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="phone" type="phone" class="form-control @error('phone') is-invalid @enderror" name="phone" required autocomplete="new-phone">
-
-                                @error('phone')
+                                @error('document')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -99,39 +64,6 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="comorbidities[]" class="col-md-4 col-form-label text-md-end">{{ __('Comorbilidades') }}</label>
-                            <div class="col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-label" value="Artrosis" type="checkbox" name="comorbidities[]">
-                                    Artrosis
-                                </div>
-                                <div class="form-check">
-                                <input class="form-check-label" value="Artritis" type="checkbox" name="comorbidities[]">
-                                   Artritis 
-                                </div>
-                                <div class="form-check">
-                                <input class="form-check-label" value="Hipertensión" type="checkbox" name="comorbidities[]">
-                                   Hipertensión 
-                                </div>
-                                <div class="form-check">
-                                <input class="form-check-label" value="Estrenimiento" type="checkbox" name="comorbidities[]">
-                                   Estrenimiento
-                                </div>
-                                <div class="form-check">
-                                <input class="form-check-label" value="Dano Renal" type="checkbox" name="comorbidities[]">
-                                   Daño Renal 
-                                </div>
-                                <input class="form-check-label" value="Ninguna" type="checkbox" name="comorbidities[]">
-                                   Ninguna 
-                                </div>
-                                @error('comorbidities[]')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="row mb-3">
                             <label for="city" class="col-md-4 col-form-label text-md-end">{{ __('Ciudad') }}</label>
 
                             <div class="col-md-6">
@@ -158,12 +90,81 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="document" class="col-md-4 col-form-label text-md-end">{{ __('Cedula') }}</label>
+                            <label for="phone" class="col-md-4 col-form-label text-md-end">{{ __('Celular') }}</label>
 
                             <div class="col-md-6">
-                                <input id="document" type="document" class="form-control @error('document') is-invalid @enderror" name="document" required autocomplete="new-document">
+                                <input id="phone" type="phone" class="form-control @error('phone') is-invalid @enderror" name="phone" required autocomplete="new-phone">
 
-                                @error('document')
+                                @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Correo') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Contraseña') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirmar contraseña') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="comorbidities[]" class="col-md-4 col-form-label text-md-end">{{ __('Comorbilidades') }}</label>
+                            <div class="col-md-6">
+                                <div class="form-check">
+                                    <input class="form-check-label" value="Artrosis" type="checkbox" name="comorbidities[]">
+                                    Artrosis
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-label" value="Artritis" type="checkbox" name="comorbidities[]">
+                                Artritis 
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-label" value="Hipertensión" type="checkbox" name="comorbidities[]">
+                                Hipertensión 
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-label" value="Estrenimiento" type="checkbox" name="comorbidities[]">
+                                Estrenimiento
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-label" value="Dano Renal" type="checkbox" name="comorbidities[]">
+                                Daño Renal 
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-label" value="Ninguna" type="checkbox" name="comorbidities[]">
+                                Ninguna 
+                                </div>
+                                @error('comorbidities[]')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

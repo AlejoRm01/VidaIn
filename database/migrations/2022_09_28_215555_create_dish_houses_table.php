@@ -16,9 +16,10 @@ return new class extends Migration
         Schema::create('dish_houses', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description');
+            $table->longText('description');
             $table->integer('healthyCategory');
-            $table->string('instructions');
+            $table->longText('ingredients');
+            $table->longText('instructions');
             $table->string('image');
             $table->timestamps();
         });

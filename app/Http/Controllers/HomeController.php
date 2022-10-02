@@ -9,9 +9,9 @@ class HomeController extends Controller
         $viewData = [];
         $viewData['title'] = 'Home Page - Senut';
         $viewData['subtitle'] = '';
+
         return view('home.index')->with('viewData', $viewData);
     }
-    
 
     public function about()
     {

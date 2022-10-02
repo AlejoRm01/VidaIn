@@ -35,12 +35,12 @@ class Aliment extends Model
             'brand' => 'required|max:255',
             'category' => 'required|max:50',
             'weight' => 'required',
-            'calories' => 'required|numeric|gt:0',
-            'carbohydrate' => 'required|numeric|gt:0',
-            'fats' => 'required|numeric|gt:0',
-            'proteins' => 'required|numeric|gt:0',
-            'fiber' => 'required|numeric|gt:0',
-            'cholesterol' => 'required|numeric|gt:0',
+            'calories' => 'required|gt:0',
+            'carbohydrate' => 'required|gt:0',
+            'fats' => 'required|gt:0',
+            'proteins' => 'required|gt:0',
+            'fiber' => 'required|gt:0',
+            'cholesterol' => 'required|gt:0',
             'image' => 'image',
         ]);
     }
@@ -54,7 +54,7 @@ class Aliment extends Model
     {
         $this->attributes['id'] = $id;
     }
-    
+
     public function getBarCode()
     {
         return $this->attributes['barCode'];

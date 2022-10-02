@@ -12,11 +12,11 @@ return new class extends Migration
      * @return void
      */
     public function up()
-    {   
+    {
         Schema::dropIfExists('diets');
         Schema::create('diets', function (Blueprint $table) {
             $table->id();
-            $table->string('description');
+            $table->longText('description');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('dish_house_id');

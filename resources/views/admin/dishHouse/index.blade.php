@@ -29,7 +29,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Description:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="description" value="{{ old('description') }}" type="text" class="form-control">
+                            <input name="description" value="{{ old('description') }}" type="textarea" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
             <div class="row">
                 <div class="col">
                     <div class="mb-3 row">
-                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Healthy Category:</label>
+                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Category:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
                             <input name="healthyCategory" value="{{ old('healthyCategory') }}" type="number" class="form-control">
                         </div>
@@ -47,12 +47,20 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Instructions:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="instructions" value="{{ old('instructions') }}" type="text" class="form-control">
+                            <input name="instructions" value="{{ old('instructions') }}" type="textarea" class="form-control">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
+                <div class="col">
+                    <div class="mb-3 row">
+                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Ingredients:</label>
+                        <div class="col-lg-10 col-md-6 col-sm-12">
+                            <input name="ingredients" value="{{ old('ingredients') }}" type="textarea" class="form-control">
+                        </div>
+                    </div>
+                </div>
                 <div class="col">
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Image:</label>
@@ -61,22 +69,18 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col">
-                    <div class="mb-3 row">
-                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label"></label>
-                        <div class="col-lg-10 col-md-6 col-sm-12">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                    </div>
-                    <div class="col">
-                    &nbsp;
+                    <button type="submit" class="btn btn-primary">Submit</button>      
                 </div>
+                <div class="col">
+                    &nbsp;
                 </div>
             </div>
         </form>
     </div>
 </div>
-
 
 <div class="card">
     <div class="card-header"> 

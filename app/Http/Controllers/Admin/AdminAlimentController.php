@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Aliment;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class AdminAlimentController extends Controller
@@ -19,7 +20,6 @@ class AdminAlimentController extends Controller
 
     public function store(Request $request)
     {
-        
         Aliment::validate($request);
 
         $newaliment = new Aliment();
@@ -34,11 +34,11 @@ class AdminAlimentController extends Controller
         $newaliment->setProteins($request->input('proteins'));
         $newaliment->setFiber($request->input('fiber'));
         $newaliment->setCholesterol($request->input('cholesterol'));
-        $newaliment->setImage("aliment.png");
+        $newaliment->setImage('aliment.png');
         $newaliment->save();
 
         if ($request->hasFile('image')) {
-            $imageName = $newaliment->getId().".".$request->file('image')->extension();
+            $imageName = $newaliment->getId().'.'.$request->file('image')->extension();
             Storage::disk('public')->put(
                 $imageName,
                 file_get_contents($request->file('image')->getRealPath())
@@ -53,20 +53,21 @@ class AdminAlimentController extends Controller
     public function delete($id)
     {
         Aliment::destroy($id);
+
         return back();
     }
 
     public function edit($id)
     {
         $viewData = [];
-        $viewData["title"] = "Administrador Senut";
-        $viewData["aliment"] = Aliment::findOrFail($id);
-        return view('admin.aliment.edit')->with("viewData", $viewData);
+        $viewData['title'] = 'Administrador Senut';
+        $viewData['aliment'] = Aliment::findOrFail($id);
+
+        return view('admin.aliment.edit')->with('viewData', $viewData);
     }
 
     public function update(Request $request, $id)
     {
-
         Aliment::validate($request);
 
         $aliment = Aliment::findOrFail($id);
@@ -81,10 +82,9 @@ class AdminAlimentController extends Controller
         $aliment->setProteins($request->input('proteins'));
         $aliment->setFiber($request->input('fiber'));
         $aliment->setCholesterol($request->input('cholesterol'));
-       
 
         if ($request->hasFile('image')) {
-            $imageName = $aliment->getId().".".$request->file('image')->extension();
+            $imageName = $aliment->getId().'.'.$request->file('image')->extension();
             Storage::disk('public')->put(
                 $imageName,
                 file_get_contents($request->file('image')->getRealPath())
@@ -94,6 +94,7 @@ class AdminAlimentController extends Controller
         }
 
         $aliment->save();
+
         return redirect()->route('admin.aliment.index');
     }
 }

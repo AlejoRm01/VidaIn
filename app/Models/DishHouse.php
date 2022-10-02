@@ -2,10 +2,8 @@
 
 namespace App\Models;
 
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
 
 class DishHouse extends Model
 {
@@ -15,9 +13,10 @@ class DishHouse extends Model
     {
         $request->validate([
             'name' => 'required|max:255',
-            'description'=> 'required|max:1000',
-            'healthyCategory'=> 'required|max:255',
-            'instructions'=> 'required|max:10000',
+            'description' => 'required',
+            'healthyCategory' => 'required|max:1',
+            'ingredients'=> 'required',
+            'instructions' => 'required',
         ]);
     }
 
@@ -69,6 +68,16 @@ class DishHouse extends Model
     public function setInstructions($instructions)
     {
         $this->attributes['instructions'] = $instructions;
+    }
+
+    public function getIngredients()
+    {
+        return $this->attributes['ingredients'];
+    }
+
+    public function setIngredients($ingredients)
+    {
+        $this->attributes['ingredients'] = $ingredients;
     }
 
     public function getImage()

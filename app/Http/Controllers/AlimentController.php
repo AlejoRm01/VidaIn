@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Aliment;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class AlimentController extends Controller

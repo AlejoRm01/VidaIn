@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Diet;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\Request;
 
 class DietController extends Controller
 {
