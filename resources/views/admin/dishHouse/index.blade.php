@@ -72,10 +72,20 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <button type="submit" class="btn btn-primary">Submit</button>      
+                    <div class="mb-3 row">
+                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Video:</label>
+                        <div class="col-lg-10 col-md-6 col-sm-12">
+                            <input name="video" value="{{ old('video') }}" type="textarea" class="form-control">
+                        </div>
+                    </div>
                 </div>
                 <div class="col">
-                    &nbsp;
+                    <div class="mb-3 row">
+                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label"></label>
+                        <div class="col-lg-10 col-md-6 col-sm-12">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </form>

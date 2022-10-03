@@ -17,6 +17,7 @@ class DishHouse extends Model
             'healthyCategory' => 'required|max:1',
             'ingredients'=> 'required',
             'instructions' => 'required',
+            'video' => 'required'
         ]);
     }
 
@@ -90,6 +91,16 @@ class DishHouse extends Model
         $this->attributes['image'] = $Image;
     }
 
+    public function getVideo()
+    {
+        return $this->attributes['video'];
+    }
+
+    public function setVideo($video)
+    {
+        $this->attributes['video'] = $video;
+    }
+    
     public function getCreatedAt()
     {
         return $this->attributes['created_at'];
