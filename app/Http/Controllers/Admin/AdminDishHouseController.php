@@ -73,7 +73,6 @@ class AdminDishHouseController extends Controller
         $dishHouse->setImage('dishHouse.png');
         $dishHouse->setVideo($request->input('video'));
 
-
         if ($request->hasFile('image')) {
             $imageName = $dishHouse->getId().'.'.$request->file('image')->extension();
             Storage::disk('public')->put(
