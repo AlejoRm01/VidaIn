@@ -22,22 +22,20 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link active" href="{{ route('home.index') }}">Inicio</a>
-                    <a class="nav-link active" href="{{ route('aliment.index') }}">Alimentos</a>
-                    <a class="nav-link active" href="{{ route('dishHouse.index') }}">Platos Casa</a>
-                    
                     <div class="vr bg-white mx-2 d-none d-lg-block"></div>
                     @guest
                         <a class="nav-link active" href="{{ route('login') }}">Iniciar sesión</a>
                     @else    
+                    <a class="nav-link active" href="{{ route('aliment.index') }}">Alimentos</a>
+                    <a class="nav-link active" href="{{ route('dishHouse.index') }}">Platos</a>
+                    <a class="nav-link active" href="{{ route('home.about') }}">Nosotros</a>  
                     <a class="nav-link active" href="{{ route('home.index') }}">{{ Auth::user()->getName() }}</a>
                     <form id="logout" action="{{ route('logout') }}" method="POST">
                         <a role="button" class="nav-link active"
                             onclick="document.getElementById('logout').submit();">Cerrar sesión</a>
                             @csrf
-                    </form>
-                    @endguest
-                <a class="nav-link active" href="{{ route('home.about') }}">Nosotros</a>        
+                    </form>   
+                    @endguest   
                 </div>
             </div>
         </div>
