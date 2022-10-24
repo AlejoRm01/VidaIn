@@ -24,8 +24,8 @@ class DishHouseController extends Controller
         $viewData['title'] = $dishHouse->getName().' - VidaIn';
         $viewData['subtitle'] = $dishHouse->getName().' - Informacion de DishHouseos';
         $viewData['dishHouse'] = $dishHouse;
-        
-        $table = DishHouse::all(); 
+
+        $table = DishHouse::all();
         $aux = $table->count();
         $num = rand(1, $aux);
         $recomendation_1 = DishHouse::findOrFail($id);
