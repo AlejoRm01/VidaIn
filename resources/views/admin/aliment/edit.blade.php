@@ -58,7 +58,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Weight:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="weight" value="{{ $viewData['aliment']->getWeight() }}" type="number" class="form-control">
+                            <input name="weight" value="{{ $viewData['aliment']->getWeight() }}" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Calories:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="calories" value="{{ $viewData['aliment']->getCalories() }}" type="number" class="form-control">
+                            <input name="calories" value="{{ $viewData['aliment']->getCalories() }}" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Carbohydrate:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="carbohydrate" value="{{ $viewData['aliment']->getCarbohydrate() }}" type="number" class="form-control">
+                            <input name="carbohydrate" value="{{ $viewData['aliment']->getCarbohydrate() }}" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Fats:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="fats" value="{{ $viewData['aliment']->getFats() }}" type="number" class="form-control">
+                            <input name="fats" value="{{ $viewData['aliment']->getFats() }}" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Proteins:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="proteins" value="{{ $viewData['aliment']->getProteins() }}" type="number" class="form-control">
+                            <input name="proteins" value="{{ $viewData['aliment']->getProteins() }}" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Fiber:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="fiber" value="{{ $viewData['aliment']->getFiber() }}" type="number" class="form-control">
+                            <input name="fiber" value="{{ $viewData['aliment']->getFiber() }}" type="text" class="form-control">
                         </div>
                     </div>
                 </div>

@@ -21,7 +21,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Bar Code:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="barCode" value="{{ old('barCode') }}" type="number" class="form-control">
+                            <input name="barCode" value="{{ old('barCode') }}" type="number"  class="form-control">
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Calories:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="calories" value="{{ old('calories') }}" type="number" class="form-control">
+                            <input name="calories" value="{{ old('calories') }}" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Carbohydrate:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="carbohydrate" value="{{ old('carbohydrate') }}" type="number" class="form-control">
+                            <input name="carbohydrate" value="{{ old('carbohydrate') }}" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Fats:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="fats" value="{{ old('fats') }}" type="number" class="form-control">
+                            <input name="fats" value="{{ old('fats') }}" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Proteins:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="proteins" value="{{ old('proteins') }}" type="number" class="form-control">
+                            <input name="proteins" value="{{ old('proteins') }}" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Fiber:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="fiber" value="{{ old('fiber') }}" type="number" class="form-control">
+                            <input name="fiber" value="{{ old('fiber') }}" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Cholesterol:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input name="cholesterol" value="{{ old('cholesterol') }}" type="number" class="form-control">
+                            <input name="cholesterol" value="{{ old('cholesterol') }}" type="text" class="form-control">
                         </div>
                     </div>
                 </div>
