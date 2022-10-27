@@ -28,15 +28,15 @@ class DishHouseController extends Controller
         $table = DishHouse::all();
         $aux = $table->count();
         $num = rand(1, $aux);
-        $recomendation_1 = DishHouse::findOrFail($id);
+        $recomendation_1 = DishHouse::findOrFail($num);
         $viewData['recomendation_1'] = $recomendation_1;
 
         $num = rand(1, $aux);
-        $recomendation_2 = DishHouse::findOrFail($id);
+        $recomendation_2 = DishHouse::findOrFail($num);
         $viewData['recomendation_2'] = $recomendation_2;
 
         $num = rand(1, $aux);
-        $recomendation_3 = DishHouse::findOrFail($id);
+        $recomendation_3 = DishHouse::findOrFail($num);
         $viewData['recomendation_3'] = $recomendation_3;
 
         return view('dishHouse.show')->with('viewData', $viewData);
