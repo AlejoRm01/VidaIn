@@ -27,7 +27,7 @@
                         <a class="nav-link active" href="{{ route('login') }}">Iniciar sesión</a>
                     @else    
                     <a class="nav-link active" href="{{ route('aliment.index') }}">Alimentos</a>
-                    <a class="nav-link active" href="{{ route('dishHouse.index') }}">Platos</a>
+                    <a class="nav-link active" href="{{ route('dishHouse.index') }}">Recetas</a>
                     <a class="nav-link active" href="{{ route('home.about') }}">Nosotros</a>  
                     <a class="nav-link active" href="{{ route('home.index') }}">{{ Auth::user()->getName() }}</a>
                     <form id="logout" action="{{ route('logout') }}" method="POST">
