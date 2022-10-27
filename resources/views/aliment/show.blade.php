@@ -2,7 +2,7 @@
 @section('title', $viewData["title"])
 @section('subtitle', $viewData["subtitle"])
 @section('content')
-<div class="card mb-3">
+<div class="card mb-3  text-center">
     <div class="col-md-4">
         <img src="{{ asset('/storage/'.$viewData['aliment']->getImage()) }}" class="displayed ">
     </div>
