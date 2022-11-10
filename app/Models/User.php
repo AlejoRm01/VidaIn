@@ -40,12 +40,6 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'phone',
-        'age',
-        'weight',
-        'comorbidities',
-        'city',
-        'address',
         'document',
     ];
 
@@ -108,36 +102,6 @@ class User extends Authenticatable
         $this->attributes['password'] = $password;
     }
 
-    public function getCity()
-    {
-        return $this->attributes['city'];
-    }
-
-    public function setCity($city)
-    {
-        $this->attributes['city'] = $city;
-    }
-
-    public function getAddress()
-    {
-        return $this->attributes['address'];
-    }
-
-    public function setAddress($address)
-    {
-        $this->attributes['address'] = $address;
-    }
-
-    public function getPhone()
-    {
-        return $this->attributes['phone'];
-    }
-
-    public function setPhone($phone)
-    {
-        $this->attributes['phone'] = $phone;
-    }
-
     public function getDocument()
     {
         return $this->attributes['document'];
@@ -146,41 +110,6 @@ class User extends Authenticatable
     public function setDocument($document)
     {
         $this->attributes['document'] = $document;
-    }
-
-    public function getAge()
-    {
-        return $this->attributes['age'];
-    }
-
-    public function setAge($age)
-    {
-        $this->attributes['age'] = $age;
-    }
-
-    public function getWeight()
-    {
-        return $this->attributes['weight'];
-    }
-
-    public function setWeight($weight)
-    {
-        $this->attributes['weight'] = $weight;
-    }
-
-    public function getRole()
-    {
-        return $this->attributes['role'];
-    }
-
-    public function getComordities()
-    {
-        return $this->attributes['comorbidities'];
-    }
-
-    public function setComordities($comorbidities)
-    {
-        $this->attributes['comorbidities'] = $comorbidities;
     }
 
     public function getCreatedAt()

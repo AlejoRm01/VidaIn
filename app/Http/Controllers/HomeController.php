@@ -7,7 +7,7 @@ class HomeController extends Controller
     public function index()
     {
         $viewData = [];
-        $viewData['title'] = 'Home Page - Senut';
+        $viewData['title'] = 'Home Page - Nutri-App';
         $viewData['subtitle'] = '';
 
         return view('home.index')->with('viewData', $viewData);
