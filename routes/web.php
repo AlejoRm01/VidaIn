@@ -12,12 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'App\Http\Controllers\Auth\LoginController@showLoginForm')->name('login');
-Route::get('/index', 'App\Http\Controllers\HomeController@index')->name('home.index');
-Route::get('/about', 'App\Http\Controllers\HomeController@about')->name('home.about');
+Route::get('/', 'App\Http\Controllers\Auth\LoginController@showLoginForm')->name('login');;
 
 Route::middleware('auth')->group(function () {
     //User section
+    //Homem
+    Route::get('/menu', 'App\Http\Controllers\HomeController@index')->name('home.index');
+    Route::get('/about', 'App\Http\Controllers\HomeController@about')->name('home.about');
+    Route::get('/select', 'App\Http\Controllers\HomeController@select')->name('home.select');
     //Aliment
     Route::get('/aliments', 'App\Http\Controllers\AlimentController@index')->name('aliment.index');
     Route::get('/aliments/search', 'App\Http\Controllers\AlimentController@search')->name('aliment.search');

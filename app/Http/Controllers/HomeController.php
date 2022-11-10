@@ -23,5 +23,14 @@ class HomeController extends Controller
         return view('home.about')->with('viewData', $viewData);
     }
 
+    public function select()
+    {
+        $viewData = [];
+        $viewData['title'] = '';
+        $viewData['subtitle'] = '';
+
+        return view('home.select')->with('viewData', $viewData);
+    }
+
     public static $photo = '/img/team.jpg';
 }

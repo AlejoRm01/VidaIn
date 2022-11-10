@@ -52,7 +52,7 @@
         </div>
         <div class="row mb-3" style="text-align:center;">
             <div class="col-md-6 offset-md-6">
-                <button  type="sumbit" class="btn btn-primary bg-secondary  btn-secondary btn-lg text-white" href="{{ route('aliment.index') }}">
+                <button  type="sumbit" class="btn bg-secondary btn-lg text-white" href="{{ route('aliment.index') }}">
                     {{ __('Ingresar') }}
                 </button >      
             </div>

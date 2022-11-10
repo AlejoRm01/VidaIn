@@ -27,8 +27,18 @@
                     <img class="img-responsive img-resize" src="{{  url('/img/cook.png')  }}" >
                 </div>
                 <div class="row">
-                    <a style="text-decoration:none" class="text-dark fw-bold" href="{{ route('dishHouse.index') }}">
-                            {{ __('¿Cocinar?') }}
+                    <a style="text-decoration:none" class="text-dark fw-bold" href="{{ route('home.select') }}">
+                            {{ __('Cocinar') }}
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row justify-content-center">
+                <img class="img-responsive img-resize" src="{{  url('/img/home.png')  }}" >
+                </div>
+                <div class="row">
+                    <a style="text-decoration:none" class="text-dark fw-bold" href="{{ route('home.index') }}">
+                            {{ __('Menu') }}
                     </a>
                 </div>
             </div>
