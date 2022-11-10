@@ -19,25 +19,25 @@ class DishHouseController extends Controller
 
     public function show($id)
     {
+        $table = DishHouse::all();
+        $aux = $table->count();
+        $num = rand(1, $aux);
+        
         $viewData = [];
         $dishHouse = DishHouse::findOrFail($id);
         $viewData['title'] = $dishHouse->getName().' - VidaIn';
         $viewData['subtitle'] = $dishHouse->getName().' - Informacion de DishHouseos';
         $viewData['dishHouse'] = $dishHouse;
 
-        $table = DishHouse::all();
-        $aux = $table->count();
-        $num = rand(1, $aux);
-        $recomendation_1 = DishHouse::findOrFail($num);
-        $viewData['recomendation_1'] = $recomendation_1;
+        $ingredients = explode("/", $dishHouse->getIngredients());
+        $instructions = explode("/", $dishHouse->getInstructions());
 
-        $num = rand(1, $aux);
-        $recomendation_2 = DishHouse::findOrFail($num);
-        $viewData['recomendation_2'] = $recomendation_2;
+        $viewData['ingredients'] = $ingredients;
+        $viewData['instructions'] = $instructions;
 
-        $num = rand(1, $aux);
-        $recomendation_3 = DishHouse::findOrFail($num);
-        $viewData['recomendation_3'] = $recomendation_3;
+        $recomendation = DishHouse::findOrFail($num);
+        $viewData['recomendation'] = $recomendation;
+
 
         return view('dishHouse.show')->with('viewData', $viewData);
     }

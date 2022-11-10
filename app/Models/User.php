@@ -112,6 +112,16 @@ class User extends Authenticatable
         $this->attributes['document'] = $document;
     }
 
+    public function getRole()
+    {
+        return $this->attributes['role'];
+    }
+
+    public function setRole($role)
+    {
+        $this->attributes['role'] = $role;
+    }
+
     public function getCreatedAt()
     {
         return $this->attributes['created_at'];
