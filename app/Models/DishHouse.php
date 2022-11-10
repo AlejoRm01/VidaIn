@@ -15,6 +15,7 @@ class DishHouse extends Model
             'name' => 'required|max:255',
             'description' => 'required',
             'healthyCategory' => 'required|max:1',
+            'dailyCategory' => 'required',
             'ingredients' => 'required',
             'instructions' => 'required',
             'video' => 'required',
@@ -29,6 +30,15 @@ class DishHouse extends Model
     public function setId($id)
     {
         $this->attributes['id'] = $id;
+    }
+    public function getDailyCategory()
+    {
+        return $this->attributes['dailyCategory'];
+    }
+
+    public function setDailyCategory($dailyCategory)
+    {
+        $this->attributes['dailyCategory'] = $dailyCategory;
     }
 
     public function getName()

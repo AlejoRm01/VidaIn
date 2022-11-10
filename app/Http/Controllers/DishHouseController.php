@@ -4,15 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\DishHouse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DishHouseController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+
         $viewData = [];
         $viewData['title'] = 'Comida del hogar';
         $viewData['subtitle'] = 'Informacion comida del hogar';
-        $viewData['dishHouses'] = DishHouse::all();
+        $viewData['dishHouses'] = DishHouse::all()->where('dailyCategory', $request);
 
         return view('dishHouse.index')->with('viewData', $viewData);
     }
@@ -37,7 +39,6 @@ class DishHouseController extends Controller
 
         $recomendation = DishHouse::findOrFail($num);
         $viewData['recomendation'] = $recomendation;
-
 
         return view('dishHouse.show')->with('viewData', $viewData);
     }

@@ -3,18 +3,23 @@
 
 <div class="container">
     <div class="row justify-content-center mb-5">
-        <label  class="col-md-6 offset-md-2 fs-1 fw-bold" style="text-align:center;" >¿De qué forma deseas hacerlo?</label>
+        <label  class="col-md-6 offset-md-2 fs-1 fw-bold" style="text-align:center;" >¿En qué parte del día te encuentras?</label>
     </div>
     <div class="row justify-content-center mb-5" style="text-align:center;">
-        <a href="{{ route('aliment.index') }}">
-            <button class="btn bg-secondary btn-lg text-white">Preparando tu plato</button>
+        <a href="{{ route('home.type',['tipo'=> "Desayuno"]) }}">
+            <button class="btn bg-secondary btn-lg text-white">Desayuno</button>
         </a>
     </div>
     <div class="row justify-content-center mb-5" style="text-align:center;">
-    <a href="{{ route('dishHouse.index') }}">
-            <button class="btn bg-secondary btn-lg text-white">Con recetas estándar</button>
+        <a href="{{ route('home.type',['tipo'=> "Almuerzo"]) }}">
+            <button class="btn bg-secondary btn-lg text-white">Almuerzo</button>
         </a>
-    </div> 
+    </div>
+    <div class="row justify-content-center mb-5" style="text-align:center;">
+        <form method="POST" action="{{ route('home.type',['tipo'=> "Cena"]) }}">
+            <button class="btn bg-secondary btn-lg text-white">Cena</button>
+        </form>
+     </div>  
 </div>
 
 @endsection
