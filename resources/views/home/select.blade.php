@@ -3,7 +3,7 @@
 
 <div class="container">
     <div class="row justify-content-center mb-5">
-        <label  class="col-md-6 offset-md-2 fs-1 fw-bold" style="text-align:center;" >¿De que forma deseas hacerlo?</label>
+        <label  class="col-md-6 offset-md-2 fs-1 fw-bold" style="text-align:center;" >¿De qué forma deseas hacerlo?</label>
     </div>
     <div class="row justify-content-center mb-5" style="text-align:center;">
         <a href="{{ route('aliment.index') }}">
