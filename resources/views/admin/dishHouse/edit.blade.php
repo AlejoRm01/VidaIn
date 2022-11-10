@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col">
                     <div class="mb-3 row">
-                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Name:</label>
+                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Nombre:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
                             <input name="name" value="{{ $viewData['dishHouse']->getName() }}" type="text" class="form-control">
                         </div>
@@ -28,7 +28,7 @@
                 </div>
                 <div class="col">
                     <div class="mb-3 row">
-                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Description:</label>
+                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Descripción:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
                             <input name="description" value="{{ $viewData['dishHouse']->getDescription() }}" type="textarea" class="form-control">
                         </div>
@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="col">
                     <div class="mb-3 row">
-                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Category:</label>
+                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Categoria:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
                             <input name="healthyCategory" value="{{ $viewData['dishHouse']->getHealthyCategory() }}" type="number" class="form-control">
                         </div>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="col">
                     <div class="mb-3 row">
-                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Instructions:</label>
+                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Instrucciones:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
                             <input name="instructions" value="{{ $viewData['dishHouse']->getInstructions() }}" type="textarea" class="form-control">
                         </div>
@@ -56,7 +56,7 @@
             <div class="row">
                 <div class="col">
                     <div class="mb-3 row">
-                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Ingredients:</label>
+                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Ingredientes:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
                             <input name="ingredients" value="{{ $viewData['dishHouse']->getIngredients() }}" type="textarea" class="form-control">
                         </div>
@@ -64,7 +64,7 @@
                 </div>
                 <div class="col">
                     <div class="mb-3 row">
-                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Image:</label>
+                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Imagen:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
                             <input class="form-control" type="file" name="image">
                         </div>
@@ -84,7 +84,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label"></label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
                         </div>
                     </div>
                 </div>

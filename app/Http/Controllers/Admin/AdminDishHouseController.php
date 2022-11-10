@@ -26,6 +26,7 @@ class AdminDishHouseController extends Controller
         $newdishHouse->setName($request->input('name'));
         $newdishHouse->setDescription($request->input('description'));
         $newdishHouse->setHealthyCategory($request->input('healthyCategory'));
+        $newdishHouse->setDailyCategory($request->input('dailyCategory'));
         $newdishHouse->setInstructions($request->input('instructions'));
         $newdishHouse->setIngredients($request->input('ingredients'));
         $newdishHouse->setImage('dishHouse.png');
@@ -68,6 +69,7 @@ class AdminDishHouseController extends Controller
         $dishHouse->setName($request->input('name'));
         $dishHouse->setDescription($request->input('description'));
         $dishHouse->setHealthyCategory($request->input('healthyCategory'));
+        $dishHouse->setDailyCategory($request->input('dailyCategory'));
         $dishHouse->setInstructions($request->input('instructions'));
         $dishHouse->setIngredients($request->input('ingredients'));
         $dishHouse->setImage('dishHouse.png');

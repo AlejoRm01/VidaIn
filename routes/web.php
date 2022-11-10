@@ -19,14 +19,15 @@ Route::middleware('auth')->group(function () {
     //Homem
     Route::get('/menu', 'App\Http\Controllers\HomeController@index')->name('home.index');
     Route::get('/about', 'App\Http\Controllers\HomeController@about')->name('home.about');
-    Route::get('/select', 'App\Http\Controllers\HomeController@select')->name('home.select');
+    Route::get('/seleccion', 'App\Http\Controllers\HomeController@select')->name('home.select');
+    Route::get('/seleccion/{tipo}', 'App\Http\Controllers\HomeController@type')->name('home.type');
     //Aliment
     Route::get('/alimentos', 'App\Http\Controllers\AlimentController@index')->name('aliment.index');
     Route::get('/alimentos/buscar', 'App\Http\Controllers\AlimentController@search')->name('aliment.search');
     Route::get('/alimentos/{id}', 'App\Http\Controllers\AlimentController@show')->name('aliment.show');
 
     //Dish House
-    Route::get('/recetas', 'App\Http\Controllers\DishHouseController@index')->name('dishHouse.index');
+    Route::get('/recetas/', 'App\Http\Controllers\DishHouseController@index')->name('dishHouse.index');
     Route::get('/recetas/buscar', 'App\Http\Controllers\DishHouseController@search')->name('dishHouse.search');
     Route::get('/recetas/{id}', 'App\Http\Controllers\DishHouseController@show')->name('dishHouse.show');
 });

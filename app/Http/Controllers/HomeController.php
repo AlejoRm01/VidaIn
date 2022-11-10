@@ -32,5 +32,14 @@ class HomeController extends Controller
         return view('home.select')->with('viewData', $viewData);
     }
 
+    public function type($tipo)
+    {
+        $viewData = [];
+        $viewData['title'] = '';
+        $viewData['subtitle'] = '';
+        $viewData['tipo'] = $tipo;
+        return view('home.type')->with('viewData', $viewData);
+    }
+
     public static $photo = '/img/team.jpg';
 }
