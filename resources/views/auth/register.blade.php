@@ -83,7 +83,7 @@
                 <div class="row mb-0" style="text-align:center;">
             <div class="col-md-8 offset-md-4">
                     <p class="text">
-                        ¿Ya tienes una cuenta? <a class="text-dark fw-bold" href="{{ route('login') }}">Inicia sesión</a>
+                        ¿Ya tienes una cuenta? <a style="text-decoration:none" class="text-dark fw-bold" href="{{ route('login') }}">Inicia sesión</a>
                     </p>
             </div>
             </form>      

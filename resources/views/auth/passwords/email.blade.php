@@ -42,7 +42,7 @@
                     <hr class="bg-danger border-2 border-top  bg-dark">
                 </div>
                 <div class="col-md-6 offset-md-4">
-                    <a class="text-dark fw-bold" href="{{ route('register') }}">
+                    <a style="text-decoration:none"  class="text-dark fw-bold" href="{{ route('register') }}">
                             {{ __('Crear una cuenta nueva') }}
                     </a>
                 </div>

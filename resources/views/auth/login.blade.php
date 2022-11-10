@@ -44,7 +44,7 @@
             </div>
             <div class="col-md-6 offset-md-2">
             @if (Route::has('password.request'))
-                <a class="text-dark fw-bold" href="{{ route('password.request') }}">
+                <a style="text-decoration:none" class="text-dark fw-bold" href="{{ route('password.request') }}">
                         {{ __('¿Olvidaste tú contraseña?') }}
                 </a>
                 @endif
@@ -61,7 +61,7 @@
             <div class="col-md-8 offset-md-4">
                 @if(Route::has('register')) 
                     <p class="text">
-                        ¿No tienes una cuenta? <a class="text-dark fw-bold" href="{{ route('register') }}">Regístrate</a>
+                        ¿No tienes una cuenta? <a style="text-decoration:none" class="text-dark fw-bold" href="{{ route('register') }}">Regístrate</a>
                     </p>
                 @endif
             </div>

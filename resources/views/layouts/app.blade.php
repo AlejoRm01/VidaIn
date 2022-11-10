@@ -27,9 +27,9 @@
                     <img class="img-responsive img-resize" src="{{  url('/img/cook.png')  }}" >
                 </div>
                 <div class="row">
-                    <label >
-                            Cocinar
-                    </label>
+                    <a style="text-decoration:none" class="text-dark fw-bold" href="{{ route('dishHouse.index') }}">
+                            {{ __('¿Cocinar?') }}
+                    </a>
                 </div>
             </div>
             <div class="col">
@@ -37,9 +37,9 @@
                 <img class="img-responsive img-resize" src="{{  url('/img/profile.png')  }}" >
                 </div>
                 <div class="row">
-                    <label>
-                        Ver mi perfil
-                    </label>
+                    <a style="text-decoration:none" class="text-dark fw-bold" href="{{ route('dishHouse.index') }}">
+                            {{ __('Ver mi perfil') }}
+                    </a>
                 </div>
             </div>
         </div>
