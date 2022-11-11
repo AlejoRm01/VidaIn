@@ -5,8 +5,8 @@
 <div class="row">
     <div class="col-lg-5 mb-5">
         <form method="GET" action="{{ route('dishHouse.search') }}" enctype="multipart/form-data" class="d-flex">
-            <input class="form-control me-2" name="query" type="Buscar" placeholder="Search" aria-label="Search">
-            <button class="btn bg-secondary text-white" type="submit">Search</button>
+            <input class="form-control me-2" name="query" type="Buscar" placeholder="Buscar" aria-label="Search">
+            <button class="btn bg-secondary text-white" type="submit">Buscar</button>
         </form>
     </div>
 </div>
