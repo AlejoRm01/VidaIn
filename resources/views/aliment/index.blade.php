@@ -2,26 +2,43 @@
 @section('title', $viewData["title"])
 @section('subtitle', $viewData["subtitle"])
 @section('content')
-<div class="row">
-    <div class="col-lg-5 mb-5">
-        <form method="GET" action="{{ route('aliment.search') }}" enctype="multipart/form-data" class="d-flex">
-            <input class="form-control me-2" name="query" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn bg-secondary text-white" type="submit">Buscar</button>
-        </form>
+
+<div class="container">
+    <div class="row justify-content-center mb-3" style="text-align:center;">
+        <label  class="col-md-6 offset-md-6 fs-3 fw-bold">Arrastra al plato la comida que deseas</label>
+    </div> 
+</div>
+
+<div class="container">
+    <div class="row">
+       <div class="col">
+        <div class="splide">
+                <div class="col-2 splide__track">
+                    <div class="splide__list">
+                    @foreach ($viewData["aliments"] as $img)
+                        <div class="col splide__slide ">
+                            <div class="card bg-dark text-white">
+                                <img src="{{  asset($img)  }}" class="card-img-top img-card img-resize2" alt="">
+                            </div>
+                        </div>
+                    @endforeach
+                    </div>
+                </div>
+            </div>
+       </div>
+       <div class="col-10">
+
+       </div>
     </div>
 </div>
 
-<div class="row">
-    @foreach ($viewData["aliments"] as $aliment)
-    <div class="col-md-4 col-lg-3 mb-2">
-        <div class="card">
-            <img src="{{ asset('/storage/'.$aliment->getImage()) }}" class="card-img-top img-card">
-            <div class="card-body text-center">
-                <a href="{{ route('aliment.show', ['id'=> $aliment->getId()]) }}" class="btn bg-primary text">
-                    {{ $aliment->getName() }}</a>
-            </div>
-        </div>
-    </div>
-    @endforeach
-</div>
+<script>
+            var splide = new Splide('.splide', {
+                type: 'loop',
+                perPage: 3,
+                rewind: true,
+            });
+
+            splide.mount();
+        </script>
 @endsection

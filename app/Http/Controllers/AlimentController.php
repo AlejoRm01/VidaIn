@@ -12,7 +12,7 @@ class AlimentController extends Controller
         $viewData = [];
         $viewData['title'] = 'Alimentos';
         $viewData['subtitle'] = 'Informacion de alimentos';
-        $viewData['aliments'] = Aliment::all();
+        $viewData['aliments'] = AlimentController::$aux;
 
         return view('aliment.index')->with('viewData', $viewData);
     }
@@ -37,6 +37,6 @@ class AlimentController extends Controller
         $viewData['subtitle'] = 'Aqui encontraras informacion de todos los alimentos';
         $viewData['aliments'] = $search;
 
-        return view('aliment.search')->with('viewData', $viewData);
     }
+    public static $aux = ['/img/alimentos/001.png','/img/alimentos/002.png','/img/alimentos/003.png','/img/alimentos/004.png','/img/alimentos/005.png','/img/alimentos/006.png'];
 }
