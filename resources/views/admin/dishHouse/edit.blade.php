@@ -43,7 +43,7 @@
                             <select name="healthyCategory" value="$viewData['dishHouse']->getHealthyCategory() }}" type="numbre" class="form-select form-select-sm">
                                 <option value="Consumo diario">Consumo diario</option>
                                 <option value="Consumo semanal">Consumo semanal</option>
-                                <option value="Consumo ocacional">Consumo ocacional</option>
+                                <option value="Consumo ocasional">Consumo ocasional</option>
                             </select>
                         </div>
                     </div>

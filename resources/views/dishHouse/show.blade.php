@@ -10,7 +10,7 @@
         <div class="card-body">
             <div class="col">
                 <div class="mb-3 row">
-                    <div class="col-lg-10 col-md-6 col-sm-12">
+                    <div style="text-transform:uppercase;" class="col-lg-10 col-md-6 col-sm-12">
                         <h3>{{ $viewData["dishHouse"]->getName() }}<h3> 
                     </div>    
                 </div>

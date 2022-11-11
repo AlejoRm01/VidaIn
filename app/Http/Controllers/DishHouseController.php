@@ -49,6 +49,8 @@ class DishHouseController extends Controller
         $query = $request->input('query');
         $search = DishHouse::where('name', 'like', '%'.$query.'%')
                             ->orWhere('dailyCategory', 'like', '%'.$query.'%')
+                            ->orWhere('healthyCategory', 'like', '%'.$query.'%')
+                            ->orWhere('ingredients', 'like', '%'.$query.'%')
                             ->get();
         $viewData['title'] = 'Buscar    Platos';
         $viewData['subtitle'] = 'Aqui encontraras informacion de todos los platos hogareños';

@@ -17,7 +17,7 @@
             <div class="card">
                 <img src="{{ asset('/storage/'.$dishHouse->getImage()) }}" class="card-img-top img-card">
                 <div class="card-body text-center">
-                    <a href="{{ route('dishHouse.show', ['id'=> $dishHouse->getId()]) }}" class="btn bg-primary text">
+                    <a style="text-transform:uppercase;" href="{{ route('dishHouse.show', ['id'=> $dishHouse->getId()]) }}" class="btn bg-primary text">
                         {{ $dishHouse->getName() }}</a>
                 </div>
             </div>
