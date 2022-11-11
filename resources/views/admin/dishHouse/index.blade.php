@@ -40,9 +40,9 @@
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Categoria:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
                             <select name="healthyCategory" value="{{ old('healthyCategory') }}" type="numbre" class="form-select form-select-sm">
-                                <option value="1">Consumo diario</option>
-                                <option value="2">Consumo semanal</option>
-                                <option value="3">Consumo ocacional</option>
+                                <option value="Consumo diario">Consumo diario</option>
+                                <option value="Consumo semanal">Consumo semanal</option>
+                                <option value="Consumo ocacional">Consumo ocacional</option>
                             </select>
                         </div>
                     </div>

@@ -8,13 +8,13 @@ use Illuminate\Support\Facades\Auth;
 
 class DishHouseController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
 
         $viewData = [];
         $viewData['title'] = 'Comida del hogar';
         $viewData['subtitle'] = 'Informacion comida del hogar';
-        $viewData['dishHouses'] = DishHouse::all()->where('dailyCategory', $request);
+        $viewData['dishHouses'] = DishHouse::all();
 
         return view('dishHouse.index')->with('viewData', $viewData);
     }
@@ -47,11 +47,26 @@ class DishHouseController extends Controller
     {
         $viewData = [];
         $query = $request->input('query');
-        $search = DishHouse::where('name', 'like', '%'.$query.'%')->get();
+        $search = DishHouse::where('name', 'like', '%'.$query.'%')
+                            ->orWhere('dailyCategory', 'like', '%'.$query.'%')
+                            ->get();
         $viewData['title'] = 'Buscar    Platos';
         $viewData['subtitle'] = 'Aqui encontraras informacion de todos los platos hogareños';
         $viewData['dishHouses'] = $search;
 
         return view('dishHouse.search')->with('viewData', $viewData);
     }
+
+    public function type($tipo)
+    {
+
+        $viewData = [];
+        $viewData['title'] = 'Comida del hogar';
+        $viewData['subtitle'] = 'Informacion comida del hogar';
+        $viewData['dishHouses'] = DishHouse::where('dailyCategory', 'like', '%'.'Almuerzo'.'%');
+
+        return view('dishHouse.type')->with('viewData', $viewData);
+    }
+
 }
+

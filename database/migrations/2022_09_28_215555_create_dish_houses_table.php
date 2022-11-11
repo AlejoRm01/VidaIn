@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->longText('description');
-            $table->integer('healthyCategory');
+            $table->string('healthyCategory');
             $table->string('dailyCategory');
             $table->longText('ingredients');
             $table->longText('instructions');

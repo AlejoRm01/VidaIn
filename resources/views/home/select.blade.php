@@ -6,19 +6,19 @@
         <label  class="col-md-6 offset-md-2 fs-1 fw-bold" style="text-align:center;" >¿En qué parte del día te encuentras?</label>
     </div>
     <div class="row justify-content-center mb-5" style="text-align:center;">
-        <a href="{{ route('home.type',['tipo'=> "Desayuno"]) }}">
+        <a href="{{ route('home.type',['tipo'=> 'Desayuno']) }}">
             <button class="btn bg-secondary btn-lg text-white">Desayuno</button>
         </a>
     </div>
     <div class="row justify-content-center mb-5" style="text-align:center;">
-        <a href="{{ route('home.type',['tipo'=> "Almuerzo"]) }}">
+        <a href="{{ route('home.type',['tipo'=> 'Almuerzo']) }}">
             <button class="btn bg-secondary btn-lg text-white">Almuerzo</button>
         </a>
     </div>
     <div class="row justify-content-center mb-5" style="text-align:center;">
-        <form method="POST" action="{{ route('home.type',['tipo'=> "Cena"]) }}">
+        <a href="{{ route('home.type',['tipo'=> 'Cena']) }}">
             <button class="btn bg-secondary btn-lg text-white">Cena</button>
-        </form>
+        </a>
      </div>  
 </div>
 

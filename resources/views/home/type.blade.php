@@ -11,9 +11,12 @@
         </a>
     </div>
     <div class="row justify-content-center mb-5" style="text-align:center;">
-        <a href="{{ route('dishHouse.index',['tipo'=> $viewData['tipo']  ])  }}">
+        <form method="GET" action="{{ route('dishHouse.search') }}" enctype="multipart/form-data">
+            {{  csrf_field()  }}
+            <input type="hidden" enctype="multipart/form-data" name="query" value="{{  $viewData['tipo']  }}">
             <button class="btn bg-secondary btn-lg text-white">Con recetas estándar</button>
-        </a>
+        </form>
+           
     </div> 
 </div>
 

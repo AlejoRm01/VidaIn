@@ -14,7 +14,7 @@ class DishHouse extends Model
         $request->validate([
             'name' => 'required|max:255',
             'description' => 'required',
-            'healthyCategory' => 'required|max:1',
+            'healthyCategory' => 'required',
             'dailyCategory' => 'required',
             'ingredients' => 'required',
             'instructions' => 'required',

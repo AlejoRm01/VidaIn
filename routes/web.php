@@ -27,9 +27,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/alimentos/{id}', 'App\Http\Controllers\AlimentController@show')->name('aliment.show');
 
     //Dish House
-    Route::get('/recetas/', 'App\Http\Controllers\DishHouseController@index')->name('dishHouse.index');
+    Route::get('/recetas', 'App\Http\Controllers\DishHouseController@index')->name('dishHouse.index');
     Route::get('/recetas/buscar', 'App\Http\Controllers\DishHouseController@search')->name('dishHouse.search');
     Route::get('/recetas/{id}', 'App\Http\Controllers\DishHouseController@show')->name('dishHouse.show');
+    
+
 });
 
 Route::middleware('admin')->group(function () {
