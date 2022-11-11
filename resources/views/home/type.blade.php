@@ -7,7 +7,7 @@
     </div>
     <div class="row justify-content-center mb-5" style="text-align:center;">
         <a href="{{ route('aliment.index') }}">
-            <button class="btn bg-secondary btn-lg text-white">Preparando tu plato</button>
+            <button class="btn bg-secondary btn-lg text-white">Preparar tu plato</button>
         </a>
     </div>
     <div class="row justify-content-center mb-5" style="text-align:center;">
