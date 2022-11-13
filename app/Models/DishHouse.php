@@ -19,6 +19,7 @@ class DishHouse extends Model
             'ingredients' => 'required',
             'instructions' => 'required',
             'video' => 'required',
+            'porcion' => '',
         ]);
     }
 
@@ -31,6 +32,17 @@ class DishHouse extends Model
     {
         $this->attributes['id'] = $id;
     }
+    
+    public function getPorcion()
+    {
+        return $this->attributes['porcion'];
+    }
+
+    public function setPorcion($porcion)
+    {
+        $this->attributes['porcion'] = $porcion;
+    }
+
     public function getDailyCategory()
     {
         return $this->attributes['dailyCategory'];

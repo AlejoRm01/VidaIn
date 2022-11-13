@@ -65,5 +65,14 @@
         width: 60px;
         height: 60px;
         }
-        
-        
+    
+    .btn {
+        padding: 5px;
+        width: calc(50% - 10px);
+        }
+    
+    .carousel {
+        width:200px;
+        height:200px;
+        }
+

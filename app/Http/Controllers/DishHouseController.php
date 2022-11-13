@@ -59,16 +59,5 @@ class DishHouseController extends Controller
         return view('dishHouse.search')->with('viewData', $viewData);
     }
 
-    public function type($tipo)
-    {
-
-        $viewData = [];
-        $viewData['title'] = 'Comida del hogar';
-        $viewData['subtitle'] = 'Informacion comida del hogar';
-        $viewData['dishHouses'] = DishHouse::where('dailyCategory', 'like', '%'.'Almuerzo'.'%');
-
-        return view('dishHouse.type')->with('viewData', $viewData);
-    }
-
 }
 

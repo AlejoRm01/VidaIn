@@ -31,6 +31,7 @@ class AdminDishHouseController extends Controller
         $newdishHouse->setIngredients($request->input('ingredients'));
         $newdishHouse->setImage('dishHouse.png');
         $newdishHouse->setVideo($request->input('video'));
+        $newdishHouse->setPorcion($request->input('porcion'));
         $newdishHouse->save();
 
         if ($request->hasFile('image')) {
@@ -72,6 +73,7 @@ class AdminDishHouseController extends Controller
         $dishHouse->setDailyCategory($request->input('dailyCategory'));
         $dishHouse->setInstructions($request->input('instructions'));
         $dishHouse->setIngredients($request->input('ingredients'));
+        $dishHouse->setPorcion($request->input('porcion'));
         $dishHouse->setImage('dishHouse.png');
         $dishHouse->setVideo($request->input('video'));
 

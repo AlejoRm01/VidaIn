@@ -42,6 +42,13 @@
                     </div>
                 </div>
                 <div class="mb-3 row">
+                    <label class="col-lg-2 col-md-6 col-sm-12 col-form-label"><h3>Porción</h3></label>
+                        <div class="col-lg-10 col-md-6 col-sm-12">
+                            <h5></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 row">
                     <label class="col-lg-2 col-md-6 col-sm-12 col-form-label"><h3> Recomendación </h3></label>
                     <div class="col-lg-10 col-md-6 col-sm-12">
                         @if ($viewData["dishHouse"]->getHealthyCategory() == '1')
@@ -63,7 +70,7 @@
                 <div class="card">
                     <img src="{{ asset('/storage/'.$viewData['recomendation']->getImage()) }}" class="card-img-top img-card">
                     <div class="card-body text-center">
-                        <a href="{{ route('dishHouse.show', ['id'=> $viewData["recomendation"]->getId()]) }}" class="btn bg-primary text">
+                        <a href="{{ route('dishHouse.show', ['id'=> $viewData["recomendation"]->getId()]) }}" style="text-transform:uppercase;" class="btn bg-primary text">
                         {{ $viewData["recomendation"]->getName() }}</a>
                     </div>
                 </div>

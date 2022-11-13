@@ -40,7 +40,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Categoria:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <select name="healthyCategory" value="$viewData['dishHouse']->getHealthyCategory() }}" type="numbre" class="form-select form-select-sm">
+                            <select name="healthyCategory" value="$viewData['dishHouse']->getHealthyCategory() }}" type="text" class="form-select form-select-sm">
                                 <option value="Consumo diario">Consumo diario</option>
                                 <option value="Consumo semanal">Consumo semanal</option>
                                 <option value="Consumo ocasional">Consumo ocasional</option>
@@ -88,7 +88,7 @@
                     <div class="mb-3 row">
                         <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Categoria diaria:</label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <select name="dailyCategory" value="{{ $viewData['dishHouse']->getDailyCategory() }}" type="textarea" class="form-select form-select-sm">
+                            <select name="dailyCategory" value="{{ $viewData['dishHouse']->getDailyCategory() }}" type="text" class="form-select form-select-sm">
                                 <option value="Desayuno">Desayuno</option>
                                 <option value="Almuerzo">Almuerzo</option>
                                 <option value="Cena">Cena</option>
@@ -97,15 +97,25 @@
                     </div>
                 </div>
             </div>
-                <div class="col">
-                    <div class="mb-3 row">
-                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label"></label>
-                        <div class="col-lg-10 col-md-6 col-sm-12">
-                            <button type="submit" class="btn btn-primary">Guardar</button>
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3 row">
+                            <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Porción:</label>
+                            <div class="col-lg-10 col-md-6 col-sm-12">
+                                <input name="porcion" value="{{  $viewData['dishHouse']->getPorcion() }}" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="mb-3 row">
+                            <label class="col-lg-2 col-md-6 col-sm-12 col-form-label"></label>
+                            <div class="col-lg-10 col-md-6 col-sm-12">
+                                <button type="submit" class="btn btn-primary">Guardar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div
+            </div>
         </form>
     </div>
 </div>
