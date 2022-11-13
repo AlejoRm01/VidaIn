@@ -73,7 +73,7 @@
                 </div>
                 <div class="row">
                     <a style="text-decoration:none" class="text-dark fw-bold" href="{{ route('dishHouse.index') }}">
-                            {{ __('Ver mi perfil') }}
+                            {{ __('Mi Perfil') }}
                     </a>
                 </div>
             </div>
