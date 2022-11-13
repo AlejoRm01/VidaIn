@@ -13,7 +13,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary py-4">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-secondary">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home.index') }}"><img width="200" height="45" src="{{   asset('/img/Logo1.png')   }}" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -41,12 +41,12 @@
         </div>
     </nav>
 
-    <div class="container my-4">
+    <div class="main">
         @yield('content')
     </div>
     
-    <div class="container-fluid bg-primary text-center p-3">
-        <div class="row">
+    <div class="container-fluid bg-primary fixed-bottom text-center p-3" >
+        <div class="row h-25">
             <div class="col">
                 <div class="row justify-content-center">
                     <img class="img-responsive img-resize" src="{{  url('/img/cook.png')  }}" >
@@ -78,7 +78,7 @@
                 </div>
             </div>
         </div>
-    </footer>    
+    </div>    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
