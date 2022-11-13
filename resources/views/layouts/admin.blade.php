@@ -18,9 +18,9 @@
             <a href="{{ route('admin.home.index') }}" class="text-white text-decoration-none"> <span class="fs-4">Panel administrador</a>
             <hr />
             <ul class="nav flex-column">
-                <li><a href="{{ route('admin.home.index') }}" class="nav-link text-white">- Admin - Home</a></li>
-                <li><a href="{{ route('admin.aliment.index') }}" class="nav-link text-white">- Admin - Aliments</a></li>
-                <li><a href="{{ route('admin.dishHouse.index') }}" class="nav-link text-white">- Admin - Dish House</a></li>    
+                <li><a href="{{ route('admin.home.index') }}" class="nav-link text-white">- Admin - Inicio</a></li>
+                <li><a href="{{ route('admin.aliment.index') }}" class="nav-link text-white">- Admin - Alimentos</a></li>
+                <li><a href="{{ route('admin.dishHouse.index') }}" class="nav-link text-white">- Admin - Recetas</a></li>    
                       
                 </li>
             </ul>
