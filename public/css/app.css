@@ -76,17 +76,16 @@
         height:200px;
         }
     
-    /* The navigation bar */
+
     .navbar {
         top: 0;
-        position: fixed; /* Set the navbar to fixed position */
-        width: 100%; /* Full width */
+        position: fixed; 
+        width: 100%; 
     }
-  
-    /* Main content */
+   
     .main {
         padding: 16px;
         margin-top: 65px;
-        margin-bottom: 800px;
-        height: 1500px; /* Add a bottom margin to avoid content overlay */
+        margin-bottom: 75px;
     }
+       

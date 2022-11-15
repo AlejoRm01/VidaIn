@@ -78,7 +78,14 @@
                         </div>
                     </div>
                 </div>
-                
+                <div class="mb-3 row">
+                    <label class="col-lg-2 col-md-6 col-sm-12 col-form-label"><h3> ¿Si lo preparaste? </h3></label>
+                    <div class="col-lg-10 col-md-6 col-sm-12">
+                        <div class="col-lg-10 col-md-6 col-sm-12">
+                            <button type="submit" class="btn bg-secondary text-white">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
                 <label class="col-lg-2 col-md-6 col-sm-12 col-form-label"><h3>Otras personas también probaron</h3></label>
                 <div class="card-group">
                     <div class="card">

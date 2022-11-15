@@ -72,7 +72,7 @@
                 <img class="img-responsive img-resize" src="{{  url('/img/profile.png')  }}" >
                 </div>
                 <div class="row">
-                    <a style="text-decoration:none" class="text-dark fw-bold" href="{{ route('dishHouse.index') }}">
+                    <a style="text-decoration:none" class="text-dark fw-bold" href="{{ route('profile.index') }}">
                             {{ __('Mi Perfil') }}
                     </a>
                 </div>
