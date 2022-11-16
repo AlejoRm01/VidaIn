@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\DishHouse;
+use App\Models\HistoryDishHouse;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -59,5 +62,18 @@ class DishHouseController extends Controller
         return view('dishHouse.search')->with('viewData', $viewData);
     }
 
+    public function foodRegister($id)
+    {
+        $userId = Auth::user()->getId();
+        $food = new HistoryDishHouse();     
+        $food->setUserId($userId);
+        $food->setDishHouseId($id);
+        $dishHouse = DishHouse::findOrFail($id);
+        $food->setName($dishHouse->getName());
+        $food->setCategory($dishHouse->getHealthyCategory());
+        $food->save();
+        
+        return redirect()->route("home.index");
+    }
 }
 

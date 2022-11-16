@@ -30,7 +30,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/recetas', 'App\Http\Controllers\DishHouseController@index')->name('dishHouse.index');
     Route::get('/recetas/buscar', 'App\Http\Controllers\DishHouseController@search')->name('dishHouse.search');
     Route::get('/recetas/{id}', 'App\Http\Controllers\DishHouseController@show')->name('dishHouse.show');
-    
+    Route::get('/recetas/cocinar/{id}', 'App\Http\Controllers\DishHouseController@foodRegister')->name('dishHouse.foodRegister');
+
+    //ProFile
     Route::get('/perfil', 'App\Http\Controllers\UserController@index')->name('profile.index');
 
 });

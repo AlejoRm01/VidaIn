@@ -35,4 +35,32 @@
         </div>
     </div>
 </div>
+
+<div class="card">
+    <div class="card-header"> 
+        Historial de alimentos
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($viewData["historyDishHouses"] as $historyDishHouse)
+                <tr>
+                    <td>{{ $historyDishHouse->getName() }}</td>
+                    <td>{{ $historyDishHouse->getCreatedAt() }}</td>
+                    <td>
+                        <a class="btn bg-secondary btn-lg text-white" href="{{  route('dishHouse.show', ['id'=> $historyDishHouse->getDishHouseId() ]) }}""></a>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>
 @endsection
