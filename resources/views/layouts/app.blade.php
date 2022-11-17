@@ -15,7 +15,7 @@
 
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-secondary">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('home.index') }}"><img width="180" height="40" src="{{   asset('/img/Logo1.png')   }}" alt=""></a>
+            <a class="navbar-brand" href="{{ route('home.index') }}"><img width="150" height="40" src="{{   asset('/img/Logo1.png')   }}" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> 
                 <span class="navbar-toggler-icon"></span>
@@ -49,21 +49,21 @@
         <div class="row h-25">
             <div class="col">
                 <div class="row justify-content-center">
-                    <img class="img-responsive img-resize" src="{{  url('/img/cook.png')  }}" >
-                </div>
-                <div class="row">
-                    <a style="text-decoration:none" class="text-dark fw-bold" href="{{ route('home.select') }}">
-                            {{ __('Cocinar') }}
-                    </a>
-                </div>
-            </div>
-            <div class="col">
-                <div class="row justify-content-center">
                 <img class="img-responsive img-resize" src="{{  url('/img/home.png')  }}" >
                 </div>
                 <div class="row">
                     <a style="text-decoration:none" class="text-dark fw-bold" href="{{ route('home.index') }}">
                             {{ __('Inicio') }}
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row justify-content-center">
+                    <img class="img-responsive img-resize" src="{{  url('/img/cook.png')  }}" >
+                </div>
+                <div class="row">
+                    <a style="text-decoration:none" class="text-dark fw-bold" href="{{ route('home.select') }}">
+                            {{ __('Cocinar') }}
                     </a>
                 </div>
             </div>
